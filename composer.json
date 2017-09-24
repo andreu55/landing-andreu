@@ -1,0 +1,7 @@
+{
+    "name": "andreu55/landing-pure-php",
+    "description": "Portfolio de Andreu García Martinez, un programador muy molón!",
+    "require": {
+        "philo/laravel-blade": "3.*"
+    }
+}
