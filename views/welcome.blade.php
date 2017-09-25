@@ -10,12 +10,62 @@
       <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
       <hr>
       <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio">Find Out More</a>
     </div>
   </div>
 </header>
 
-<section class="bg-primary" id="about">
+@if ($portfolio)
+  <section class="p-0" id="portfolio">
+    <div class="container-fluid">
+      <div class="row no-gutter popup-gallery grid">
+        @foreach ($portfolio as $p)
+          <div class="col-lg-4 col-sm-6 grid-item {{ $p['filters'] }}">
+            <a class="portfolio-box" href="{{ $p['img_full'] }}">
+              <img class="img-fluid" src="{{ $p['img_thumb'] }}" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    {{ $p['category'] }}
+                  </div>
+                  <div class="project-name">
+                    {{ $p['name'] }}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        @endforeach
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <hr class="primary">
+          <div class="button-group filter-button-group text-center pad-bot">
+            <button type="button" class="btn btn-secondary" data-filter="*">Todos</button>
+            <button type="button" class="btn btn-primary btn-sm" data-filter=".cat">cat</button>
+            <button type="button" class="btn btn-primary btn-sm" data-filter=".teg">teg</button>
+            <button type="button" class="btn btn-primary btn-sm" data-filter=".ory">ory</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+@endif
+
+<style media="screen">
+
+
+</style>
+
+<section>
+
+</section>
+
+{{-- <section class="bg-primary" id="about">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
@@ -26,7 +76,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 
 <section id="services">
   <div class="container">
@@ -71,55 +121,12 @@
   </div>
 </section>
 
-@if ($portfolio)
-
-  <section class="p-0" id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Portfolio</h2>
-          <hr class="primary">
-          <div class="button-group filter-button-group text-center pad-bot">
-            <button type="button" class="btn btn-secondary" data-filter="*">Todos</button>
-            <button type="button" class="btn btn-primary btn-sm" data-filter=".cat">cat</button>
-            <button type="button" class="btn btn-primary btn-sm" data-filter=".teg">teg</button>
-            <button type="button" class="btn btn-primary btn-sm" data-filter=".ory">ory</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-
-      <div class="row no-gutter popup-gallery grid">
-        @foreach ($portfolio as $p)
-          <div class="col-lg-4 col-sm-6 grid-item {{ $p['filters'] }}">
-            <a class="portfolio-box" href="{{ $p['img_full'] }}">
-              <img class="img-fluid" src="{{ $p['img_thumb'] }}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    {{ $p['category'] }}
-                  </div>
-                  <div class="project-name">
-                    {{ $p['name'] }}
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        @endforeach
-      </div>
-    </div>
-  </section>
-@endif
-
-<div class="call-to-action bg-dark">
+{{-- <div class="call-to-action bg-dark">
   <div class="container text-center">
     <h2>Free Download at Start Bootstrap!</h2>
     <a class="btn btn-default btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
   </div>
-</div>
+</div> --}}
 
 @endsection
 
