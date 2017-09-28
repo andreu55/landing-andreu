@@ -7,7 +7,7 @@
 <header class="masthead">
   <div class="header-content">
     <div class="header-content-inner">
-      <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
+      <h1 id="homeHeading">Your Favorite Source of cool Bootstrap Themes</h1>
       <hr>
       <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
       <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio">Find Out More</a>
@@ -56,28 +56,6 @@
   </section>
 @endif
 
-<style media="screen">
-
-
-</style>
-
-<section>
-
-</section>
-
-{{-- <section class="bg-primary" id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <h2 class="section-heading text-white">We've got what you need!</h2>
-        <hr class="light">
-        <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-        <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-      </div>
-    </div>
-  </div>
-</section> --}}
-
 <section id="services">
   <div class="container">
     <div class="row">
@@ -116,6 +94,19 @@
           <h3>Made with Love</h3>
           <p class="text-muted">You have to make your websites with love these days!</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="section-heading text-white">We've got what you need!</h2>
+        <hr class="light">
+        <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+        <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">Get Started!</a>
       </div>
     </div>
   </div>
