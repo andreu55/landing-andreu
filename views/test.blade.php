@@ -12,7 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/normalize.css') }}" />
 		<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/demo.css') }}" />
 		<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/component.css') }}" />
-
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 		<script src="{{ asset('isometric/js/modernizr.custom.js') }}"></script>
 	</head>
@@ -36,15 +36,61 @@
 					</ul>
 				</div>
 			</section>
-			<section class="interval">
-				<p class="interval__text">Isometric projection is a method for visually representing three-dimensional objects in two dimensions in technical and engineering drawings. <em>&mdash; <a href="https://en.wikipedia.org/wiki/Isometric_projection">Wikipedia</a></em></p>
-			</section>
+			{{-- <section class="interval">
+				<p class="interval__text">IsometricIsometric projection is a method for visually representing three-dimensional objects in two dimensions in technical and engineering drawings. <em>&mdash; </em></p>
+			</section> --}}
+			<footer class="footer-distributed">
+
+				<div class="footer-left">
+
+					<h3>Company<span>logo</span></h3>
+
+					<p class="footer-links">
+						<a href="#">Home</a>
+						·
+						<a href="#">Blog</a>
+						·
+						<a href="#">Pricing</a>
+						·
+						<a href="#">About</a>
+						·
+						<a href="#">Faq</a>
+						·
+						<a href="#">Contact</a>
+					</p>
+
+					<p class="footer-company-name">Andreu García Martínez &copy; {{ date('Y') }}</p>
+
+					<div class="footer-icons">
+
+						<a target="_blank" rel="nofollow" href="https://www.facebook.com/anduwet"><i class="fa fa-facebook"></i></a>
+						<a target="_blank" rel="nofollow" href="https://twitter.com/andreu55"><i class="fa fa-twitter"></i></a>
+						<a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/andreu-garcia-martinez-69a95061/"><i class="fa fa-linkedin"></i></a>
+						<a target="_blank" rel="nofollow" href="https://github.com/andreu55"><i class="fa fa-github"></i></a>
+
+					</div>
+
+				</div>
+
+				<div class="footer-right">
+
+					<p>Contact</p>
+
+					<div class="form">
+						<input type="text" id="email" placeholder="Email" />
+						<textarea id="message" placeholder="Message"></textarea>
+						<a id="send_button">Send</a>
+					</div>
+
+				</div>
+
+			</footer>
+
 		</main>
 
 		{{-- Modal --}}
 		<div class="modal-box">
 			<div class="modal-box-content">
-
 				<ul>
 					<li><a href="#">One</a></li>
 					<li><a href="#">Two</a></li>
@@ -64,7 +110,7 @@
 		<script src="{{ asset('isometric/js/classie.js') }}"></script>
 		<script src="{{ asset('isometric/js/main.js') }}"></script>
 
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 		<script>
 
@@ -158,6 +204,26 @@
 		        height: '2px'
 		    }).removeClass('is-open');
 		});
+
+
+		$("#send_button").click(function(){
+
+			$("#send_button").html('<i class="fa fa-refresh fa-spin fa-fw"></i>');
+
+	    $.post("send.php",
+	    {
+	       email: $('#email').val(),
+	       message: $('#message').val()
+	    },
+	    function(data, status){
+	        if(status == 'success') {
+
+						console.log(data);
+
+						$("#send_button").html('Enviado!');
+					}
+	    });
+	});
 
 		</script>
 	</body>
