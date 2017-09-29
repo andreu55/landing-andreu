@@ -4,21 +4,22 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Isometric Grids | Demo 2 | Codrops</title>
+		<title>Andreu</title>
 		<meta name="description" content="Decorative &amp; interactive isometric &amp; 3D grids." />
 		<meta name="keywords" content="isometric, grid, images, masonry, perspective" />
-		<meta name="author" content="Codrops" />
+
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/normalize.css') }}" />
 		<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/demo.css') }}" />
 		<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/component.css') }}" />
+
 
 		<script src="{{ asset('isometric/js/modernizr.custom.js') }}"></script>
 	</head>
 	<body class="demo-2">
 		<main>
 			<section class="section section--shots section--right">
-				<h2 class="section__heading">Imagine {{-- <em>is</em> --}} Everything</h2> 
+				<h2 class="section__heading">Imagine {{-- <em>is</em> --}} Everything</h2>
 				<p class="section__subtitle">To raise new questions, new possibilities, to regard old problems from a new angle, requires creative imagination and marks real advance in science.</p>
 				<div class="isolayer isolayer--deco4">
 					<ul class="grid">
@@ -28,7 +29,7 @@
 									<div class="layer"></div>
 									<div class="layer"></div>
 									<div class="layer"></div>
-									<img data-title="{{ $i['title'] }}" data-content="{{ $i['content'] }}" data-atype="{{ $i['atype'] }}" class="modalaco grid__img layer" src="{{ asset($i['img']) }}" alt="{{ $i['alt'] }}" />
+									<img data-title="{{ $i['title'] }}" data-content="{{ $i['content'] }}" data-atype="{{ $i['atype'] }}" class="modal-open grid__img layer" src="{{ asset($i['img']) }}" alt="{{ $i['alt'] }}" />
 								</a>
 							</li>
 						@endforeach
@@ -41,16 +42,19 @@
 		</main>
 
 		{{-- Modal --}}
-		<div id="modal-container">
-			<div class="modal-background">
-				<div class="modal">
-					<h2 id="m_title">I'm a Modal</h2>
-					<p id="m_content">Hear me roar.</p>
-					<svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
-						<rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
-					</svg>
-				</div>
+		<div class="modal-box">
+			<div class="modal-box-content">
+
+				<ul>
+					<li><a href="#">One</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					<li><a href="#">Four</a></li>
+					<li><a href="#">Five</a></li>
+					<li>Isometric projection is a method for visually representing three-dimensional objects in two dimensions in technical and engineering drawings. <em>&mdash; <a href="https://en.wikipedia.org/wiki/Isometric_projection">Wikipedia</a></em></li>
+				</ul>
 			</div>
+			<button class="modal-close"><span class="visuallyhidden">Close modal box</span></button>
 		</div>
 
 
@@ -63,24 +67,6 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 
 		<script>
-
-		$('.modalaco').click(function(){
-			var buttonId = $(this).data('atype');
-			var title = $(this).data('title');
-		  var content = $(this).data('content');
-
-
-			$('#m_title').html(title);
-			$('#m_content').html(content);
-
-			$('#modal-container').removeAttr('class').addClass(buttonId);
-		  $('body').addClass('modal-active');
-		})
-
-		$('#modal-container').click(function(){
-		  $(this).addClass('out');
-		  $('body').removeClass('modal-active');
-		});
 
 		(function() {
 			function getRandomInt(min, max) {
@@ -132,6 +118,47 @@
 				}
 			});
 		})();
+
+
+		var $trigger = $('.modal-open');
+		var $close = $('.modal-close');
+		var $modal = $('.modal-box');
+
+		$(window).on('resize', function() {
+		    var top = $trigger.offset().top + $trigger.outerHeight();
+		    var left = $trigger.offset().left;
+		    var width = $trigger.outerWidth();
+		    $trigger.attr({
+		        'data-top': top,
+		        'data-left': left,
+		        'data-width': width
+		    });
+		    $modal.css({
+		        top: top,
+		        left: left
+		    });
+		}).trigger('resize');
+
+		$trigger.on('click', function() {
+		    $modal.css({
+		        top: 0,
+		        left: 0,
+		        width: '100%',
+		        height: '100%'
+		    }).addClass('is-open');
+		});
+
+		$close.on('click', function() {
+		    var top = $trigger.offset().top + $trigger.outerHeight();
+		    var left = $trigger.offset().left;
+		    $modal.css({
+		        top: top,
+		        left: left,
+		        width: 0,
+		        height: '2px'
+		    }).removeClass('is-open');
+		});
+
 		</script>
 	</body>
 </html>

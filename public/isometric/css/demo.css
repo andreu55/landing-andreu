@@ -1,14 +1,3 @@
-@font-face {
-	font-weight: normal;
-	font-style: normal;
-	font-family: 'codropsicons';
-	src:url('../fonts/codropsicons/codropsicons.eot');
-	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
-		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
-		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
-}
-
 *, *::after, *::before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix::before, .clearfix::after {display: table;  content: ''; }
 .clearfix::after { clear: both; }
@@ -30,125 +19,6 @@ a {
 a:hover, a:focus {
 	color: #4d5871;
 	outline: none;
-}
-
-.button-menu {
-	width: 50px;
-	height: 30px;
-	position: fixed;
-	top: 3em;
-	right: 3em;
-	border: none;
-	background: transparent;
-	fill: #fff;
-	cursor: pointer;
-	pointer-events: auto;
-}
-
-.button-menu:focus {
-	outline: none;
-}
-
-/* Header */
-.codrops-header {
-	padding: 3vmax 0 0 3vmax;
-	position: absolute;
-	width: 100%;
-	z-index: 2000;
-	pointer-events: none;
-}
-
-.demo-1 .codrops-header {
-	position: fixed;
-}
-
-.codrops-header h1 {
-	margin: 0;
-	letter-spacing: -0.035em;
-	font-size: 4.65em;
-	line-height: 1;
-	font-weight: 900;
-	color: #323F5C;
-}
-
-.codrops-header p {
-	padding: 0;
-	margin: 0;
-    font-size: 1.25em;
-    font-weight: bold;
-    color: #fff;
-}
-
-/* Top Navigation Style */
-.codrops-links {
-	position: relative;
-	display: inline-block;
-	text-align: center;
-	white-space: nowrap;
-	pointer-events: auto;
-	margin: 0 0 0 -0.5em;
-}
-
-.codrops-links::after {
-	content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1px;
-    height: 110%;
-    background: #323F5C;
-    opacity: 0.1;
-    -webkit-transform: translateY(-50%) rotate3d(0, 0, 1, 22.5deg);
-    transform: translateY(-50%) rotate3d(0, 0, 1, 22.5deg);
-}
-
-.codrops-icon {
-	display: inline-block;
-	margin: 0.5em;
-	width: 1.5em;
-	text-decoration: none;
-}
-
-.codrops-icon span {
-	display: none;
-}
-
-.codrops-icon::before {
-	margin: 0 5px;
-	text-transform: none;
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-	font-family: 'codropsicons';
-	line-height: 1;
-
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-}
-
-.codrops-icon--drop::before {
-	content: "\e001";
-	color: #0099cc;
-}
-
-.codrops-icon--prev::before {
-	content: "\e004";
-}
-
-/* Demo links */
-.codrops-demos {
-	margin: 1.5em 0;
-}
-
-.codrops-demos a {
-	display: inline-block;
-	margin: 0 1em 0 0;
-	font-weight: bold;
-	pointer-events: auto;
-}
-
-.codrops-demos a.current-demo {
-	color: #ce4555;
 }
 
 /* Content */
@@ -418,128 +288,131 @@ a:hover, a:focus {
 	}
 }
 
-/* Modal molon */
+/* Modal */
 
-html.modal-active, body.modal-active {
-overflow: hidden;
-}
-
-#modal-container {
-position: fixed;
-display: table;
-height: 100%;
-width: 100%;
-top: 0;
-left: 0;
-transform: scale(0);
-z-index: 1;
-}
-
-#modal-container.six {
-transform: scale(1);
-}
-#modal-container.six .modal-background {
-background: transparent;
-animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container.six .modal-background .modal {
-background-color: transparent;
-animation: modalFadeIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container.six .modal-background .modal h2, #modal-container.six .modal-background .modal p {
-opacity: 0;
-position: relative;
-animation: modalContentFadeIn 0.5s 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container.six .modal-background .modal .modal-svg rect {
-animation: sketchIn 0.5s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container.six.out {
-animation: quickScaleDown 0s .5s linear forwards;
-}
-#modal-container.six.out .modal-background {
-animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container.six.out .modal-background .modal {
-animation: modalFadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container.six.out .modal-background .modal h2, #modal-container.six.out .modal-background .modal p {
-animation: modalContentFadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container.six.out .modal-background .modal .modal-svg rect {
-animation: sketchOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container .modal-background {
-display: table-cell;
-background: rgba(0, 0, 0, 0.8);
-text-align: center;
-vertical-align: middle;
-}
-#modal-container .modal-background .modal {
-background: white;
-padding: 50px;
-display: inline-block;
-border-radius: 3px;
-font-weight: 300;
-position: relative;
-}
-#modal-container .modal-background .modal h2 {
-font-size: 25px;
-line-height: 25px;
-margin-bottom: 15px;
-}
-#modal-container .modal-background .modal p {
-font-size: 18px;
-line-height: 22px;
-}
-#modal-container .modal-background .modal .modal-svg {
+.modal-box {
 position: absolute;
-top: 0;
+overflow: hidden;
+width: 0;
+height: 2px;
+color: #fff;
+background-color: #505050;
+-webkit-transition: width 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), left 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), height 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), top 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+transition: width 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), left 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), height 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), top 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.modal-box.is-open {
+-webkit-transition: width 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), left 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), height 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), top 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+transition: width 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), left 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), height 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), top 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.modal-box.is-open li {
+opacity: 1;
+}
+.modal-box.is-open .modal-close {
+opacity: 1;
+-webkit-transition: all 500ms 700ms;
+transition: all 500ms 700ms;
+}
+.modal-box ul {
+position: absolute;
+top: 50%;
+left: 50%;
+margin: 0;
+padding: 30px;
+list-style-type: none;
+-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+}
+.modal-box li {
+position: relative;
+margin: 20px 0;
+text-align: center;
+opacity: 0;
+-webkit-transition: all 200ms;
+transition: all 200ms;
+}
+.modal-box a {
+position: relative;
+font-weight: 300;
+text-decoration: none;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: #fff;
+}
+.modal-box a:before, .modal-box a:after {
+content: "";
+position: absolute;
+top: 100%;
 left: 0;
-height: 100%;
+height: 2px;
+-webkit-transition: width 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+transition: width 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.modal-box a:after {
+width: 0;
+background-color: #fff;
+}
+.modal-box a:hover:after {
 width: 100%;
-border-radius: 3px;
 }
-#modal-container .modal-background .modal .modal-svg rect {
-stroke: #fff;
-stroke-width: 2px;
-stroke-dasharray: 778;
-stroke-dashoffset: 778;
+.modal-box.is-open li:nth-child(1) {
+-webkit-transition: all 500ms 575ms;
+transition: all 500ms 575ms;
 }
-@keyframes fadeIn {
-0% { background: transparent; }
-100% { background: rgba(0, 0, 0, 0.7); }
+.modal-box.is-open li:nth-child(2) {
+-webkit-transition: all 500ms 650ms;
+transition: all 500ms 650ms;
 }
-@keyframes fadeOut {
-0% { background: rgba(0, 0, 0, 0.7); }
-100% { background: transparent; }
+.modal-box.is-open li:nth-child(3) {
+-webkit-transition: all 500ms 725ms;
+transition: all 500ms 725ms;
 }
-@keyframes quickScaleDown {
-0% { transform: scale(1); }
-99.9% {transform: scale(1);}
-100% { transform: scale(0); }
+.modal-box.is-open li:nth-child(4) {
+-webkit-transition: all 500ms 800ms;
+transition: all 500ms 800ms;
 }
-@keyframes sketchIn {
-0% { stroke-dashoffset: 778; }
-100% { stroke-dashoffset: 0; }
+.modal-box.is-open li:nth-child(5) {
+-webkit-transition: all 500ms 875ms;
+transition: all 500ms 875ms;
 }
-@keyframes sketchOut {
-0% { stroke-dashoffset: 0; }
-100% { stroke-dashoffset: 778; }
+
+.modal-close {
+position: absolute;
+top: 10px;
+right: 10px;
+width: 15px;
+height: 15px;
+padding: 0;
+border: 0;
+outline: none;
+opacity: 0;
+background-color: transparent;
+-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
 }
-@keyframes modalFadeIn {
-0% { background-color: transparent; }
-100% { background-color: white; }
+.modal-close:before, .modal-close:after {
+content: "";
+display: block;
+position: absolute;
+top: 50%;
+left: 0;
+width: 15px;
+height: 3px;
+background-color: #fff;
+-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
 }
-@keyframes modalFadeOut {
-0% { background-color: white; }
-100% { background-color: transparent; }
+.modal-close:after {
+width: 3px;
+height: 15px;
 }
-@keyframes modalContentFadeIn {
-0% { opacity: 0; top: -20px; }
-100% { opacity: 1; top: 0; }
-}
-@keyframes modalContentFadeOut {
-0% { opacity: 1; top: 0px; }
-100% { opacity: 0; top: -20px; }
+
+.visuallyhidden {
+position: absolute;
+overflow: hidden;
+clip: rect(0 0 0 0);
+width: 1px;
+height: 1px;
+margin: -1px;
+padding: 0;
+border: 0;
 }
