@@ -316,14 +316,14 @@ opacity: 1;
 transition: all 500ms 700ms;
 }
 .modal-box ul {
-position: absolute;
-top: 50%;
-left: 50%;
+/*position: absolute;
+top: 85%;
+left: 50%;*/
 margin: 0;
 padding: 30px;
 list-style-type: none;
--webkit-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
+/*-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);*/
 }
 .modal-box li {
 position: relative;

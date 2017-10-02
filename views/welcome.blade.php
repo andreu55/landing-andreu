@@ -1,147 +1,240 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Andreu</title>
+		<meta name="description" content="Decorative &amp; interactive isometric &amp; 3D grids." />
+		<meta name="keywords" content="isometric, grid, images, masonry, perspective" />
 
-@section('title', 'Andreu García Martínez')
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/normalize.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/demo.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/component.css') }}" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-@section('content')
+		<script src="{{ asset('isometric/js/modernizr.custom.js') }}"></script>
+	</head>
+	<body class="demo-2">
+		<main>
+			<section class="section section--shots section--right">
+				<h2 class="section__heading">Imagine {{-- <em>is</em> --}} Everything</h2>
+				<p class="section__subtitle">To raise new questions, new possibilities, to regard old problems from a new angle, requires creative imagination and marks real advance in science.</p>
+				<div class="isolayer isolayer--deco4">
+					<ul class="grid">
+						@foreach ($isometric as $key => $i)
+							<li class="grid__item">
+								<a href="{{ $i['url'] }}" class="grid__link">
+									<div class="layer"></div>
+									<div class="layer"></div>
+									<div class="layer"></div>
+									<img data-title="{{ $i['title'] }}" data-content="{{ $i['content'] }}" data-atype="{{ $i['atype'] }}" class="modal-open grid__img layer" src="{{ asset($i['img']) }}" alt="{{ $i['alt'] }}" />
+								</a>
+							</li>
+						@endforeach
+					</ul>
+				</div>
+			</section>
+			{{-- <section class="interval">
+				<p class="interval__text">IsometricIsometric projection is a method for visually representing three-dimensional objects in two dimensions in technical and engineering drawings. <em>&mdash; </em></p>
+			</section> --}}
+			<footer class="footer-distributed">
+				<div class="footer-left">
+					<h3>Company<span>logo</span></h3>
+					<p class="footer-links">
+						<a href="#">Home</a>
+						·
+						<a href="#">Blog</a>
+						·
+						<a href="#">Pricing</a>
+						·
+						<a href="#">About</a>
+						·
+						<a href="#">Faq</a>
+						·
+						<a href="#">Contact</a>
+					</p>
+					<p class="footer-company-name">Andreu García Martínez &copy; {{ date('Y') }}</p>
+					<div class="footer-icons">
+						<a target="_blank" rel="nofollow" href="https://www.facebook.com/anduwet"><i class="fa fa-facebook"></i></a>
+						<a target="_blank" rel="nofollow" href="https://twitter.com/andreu55"><i class="fa fa-twitter"></i></a>
+						<a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/andreu-garcia-martinez-69a95061/"><i class="fa fa-linkedin"></i></a>
+						<a target="_blank" rel="nofollow" href="https://github.com/andreu55"><i class="fa fa-github"></i></a>
+					</div>
+				</div>
 
-<header class="masthead">
-  <div class="header-content">
-    <div class="header-content-inner">
-      <h1 id="homeHeading">Your Favorite Source of cool Bootstrap Themes</h1>
-      <hr>
-      <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio">Find Out More</a>
-    </div>
-  </div>
-</header>
+				<div class="footer-right">
+					<p>Contact me</p>
+					<div class="form">
+						<input type="text" id="email" placeholder="Email" />
+						<textarea id="message" placeholder="Message"></textarea>
+						<a id="send_button">Send</a>
+					</div>
+				</div>
+			</footer>
 
-@if ($portfolio)
-  <section class="p-0" id="portfolio">
-    <div class="container-fluid">
-      <div class="row no-gutter popup-gallery grid">
-        @foreach ($portfolio as $p)
-          <div class="col-lg-4 col-sm-6 grid-item {{ $p['filters'] }}">
-            <a class="portfolio-box" href="{{ $p['img_full'] }}">
-              <img class="img-fluid" src="{{ $p['img_thumb'] }}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    {{ $p['category'] }}
-                  </div>
-                  <div class="project-name">
-                    {{ $p['name'] }}
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        @endforeach
-      </div>
-    </div>
+		</main>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <hr class="primary">
-          <div class="button-group filter-button-group text-center pad-bot">
-            <button type="button" class="btn btn-secondary" data-filter="*">Todos</button>
-            <button type="button" class="btn btn-primary btn-sm" data-filter=".cat">cat</button>
-            <button type="button" class="btn btn-primary btn-sm" data-filter=".teg">teg</button>
-            <button type="button" class="btn btn-primary btn-sm" data-filter=".ory">ory</button>
-          </div>
-        </div>
-      </div>
-    </div>
+		{{-- Modal --}}
+		<div class="modal-box">
+			<div class="modal-box-content">
+				<section class="section">
+					<div style="margin-top:150px">
+						<div style="width:50%; float:left">
+							<div style="padding:0 22px; text-align:center">
+								<img id="modal-img" src="{{ asset('isometric/img/Dribbble/1.png') }}" alt="" style="width:100%;opacity:1">
+							</div>
+						</div>
+						<div style="width:50%; float:left">
+							<div style="padding:0 22px">
+								<h3 id="modal-title">Titulaco</h3>
+								<div id="modal-content">
+									Hola! Isometric projection is a method for visually representing three-dimensional objects in two dimensions in technical and engineering drawings. <em>&mdash; <a href="https://en.wikipedia.org/wiki/Isometric_projection">Wikipedia</a></em>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>
+								<ul>
+									<li><a href="#">One</a></li>
+									<li><a href="#">Two</a></li>
+									<li><a href="#">Three</a></li>
+									<li><a href="#">Four</a></li>
+									<li><a href="#">Five</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<button class="modal-close"><span class="visuallyhidden">Close modal box</span></button>
+		</div>
 
-  </section>
-@endif
 
-<section id="services">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">At Your Service</h2>
-        <hr class="primary">
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box">
-          <i class="fa fa-3x fa-diamond text-primary sr-icons pad-bot"></i>
-          <h3>Sturdy Templates</h3>
-          <p class="text-muted">Our templates are updated regularly so they don't break.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box">
-          <i class="fa fa-3x fa-paper-plane text-primary sr-icons pad-bot"></i>
-          <h3>Ready to Ship</h3>
-          <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box">
-          <i class="fa fa-3x fa-newspaper-o text-primary sr-icons pad-bot"></i>
-          <h3>Up to Date</h3>
-          <p class="text-muted">We update dependencies to keep things fresh.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box">
-          <i class="fa fa-3x fa-heart text-primary sr-icons pad-bot"></i>
-          <h3>Made with Love</h3>
-          <p class="text-muted">You have to make your websites with love these days!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+		<script src="{{ asset('isometric/js/imagesloaded.pkgd.min.js') }}"></script>
+		<script src="{{ asset('isometric/js/masonry.pkgd.min.js') }}"></script>
+		<script src="{{ asset('isometric/js/dynamics.min.js') }}"></script>
+		<script src="{{ asset('isometric/js/classie.js') }}"></script>
+		<script src="{{ asset('isometric/js/main.js') }}"></script>
 
-<section class="bg-primary" id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <h2 class="section-heading text-white">We've got what you need!</h2>
-        <hr class="light">
-        <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-        <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-      </div>
-    </div>
-  </div>
-</section>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-{{-- <div class="call-to-action bg-dark">
-  <div class="container text-center">
-    <h2>Free Download at Start Bootstrap!</h2>
-    <a class="btn btn-default btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
-  </div>
-</div> --}}
+		<script>
 
-@endsection
+		(function() {
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
 
-@section('scripts')
+			// new IsoGrid(document.querySelector('.isolayer--deco1'), {
+			// 	transform : 'translateX(33vw) translateY(-340px) rotateX(45deg) rotateZ(45deg)',
+			// 	stackItemsAnimation : {
+			// 		properties : function(pos) {
+			// 			return {
+			// 				translateZ: (pos+1) * 30,
+			// 				rotateZ: getRandomInt(-4, 4)
+			// 			};
+			// 		},
+			// 		options : function(pos, itemstotal) {
+			// 			return {
+			// 				type: dynamics.bezier,
+			// 				duration: 500,
+			// 				points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
+			// 				delay: (itemstotal-pos-1)*40
+			// 			};
+			// 		}
+			// 	}
+			// });
+			new IsoGrid(document.querySelector('.isolayer--deco4'), {
+				perspective: 3000,
+				transform : 'translate3d(-200px,-200px,0) scale3d(0.8,0.8,1) rotateY(45deg) rotateZ(-10deg)',
+				stackItemsAnimation : {
+					properties : function(pos) {
+						return {
+							rotateX: (pos+1) * -2,
+							translateZ: (pos+1) * 15,
+							rotateZ: getRandomInt(-5, 5)
+						};
+					},
+					options : function(pos, itemstotal) {
+						return {
+							// type: dynamics.spring,
+							type: dynamics.bezier,
+							duration: 450,
+							points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
+							delay: (itemstotal-pos-1)*30
+						};
+					}
+				},
+				onGridLoaded : function() {
+					classie.add(document.body, 'grid-loaded');
+				}
+			});
+		})();
 
-  <script src="{{ asset('js/creative.min.js') }}"></script>
-  <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
 
-  <script type="text/javascript">
-    var $grid = $('.grid').isotope({
-      // options
-      itemSelector: '.grid-item',
-      layoutMode: 'fitRows'
-    });
+		var $trigger = $('.modal-open');
+		var $close = $('.modal-close');
+		var $modal = $('.modal-box');
 
-    // filter items on button click
-    $('.filter-button-group').on( 'click', 'button', function() {
-      // Ponemos todos los rojos a verdes // Ponemos rojo el seleccionado
-      $(".filter-button-group button.btn-secondary").removeClass("btn-secondary").addClass("btn-primary btn-sm");
-      $(this).removeClass("btn-primary btn-sm").addClass("btn-secondary");
+		$(window).on('resize', function() {
+		    var top = $trigger.offset().top + $trigger.outerHeight();
+		    var left = $trigger.offset().left;
+		    var width = $trigger.outerWidth();
+		    $trigger.attr({
+		        'data-top': top,
+		        'data-left': left,
+		        'data-width': width
+		    });
+		    $modal.css({
+		        top: top,
+		        left: left
+		    });
+		}).trigger('resize');
 
-      var filterValue = $(this).attr('data-filter');
-      $grid.isotope({ filter: filterValue });
-    });
-  </script>
+		$trigger.on('click', function() {
 
-@endsection
+				$('#modal-title').html($(this).data('title'));
+				$('#modal-content').html($(this).data('content'));
+				$('#modal-img').attr('src', $(this).attr('src'));
+
+		    $modal.css({
+		        top: 0,
+		        left: 0,
+		        width: '100%',
+		        height: '100%'
+		    }).addClass('is-open');
+		});
+
+		$close.on('click', function() {
+		    var top = $trigger.offset().top + $trigger.outerHeight();
+		    var left = $trigger.offset().left;
+		    $modal.css({
+		        top: top,
+		        left: left,
+		        width: 0,
+		        height: '2px'
+		    }).removeClass('is-open');
+		});
+
+
+		$("#send_button").click(function(){
+
+			$("#send_button").html('<i class="fa fa-refresh fa-spin fa-fw"></i>');
+
+	    $.post("send.php",
+	    {
+	       email: $('#email').val(),
+	       message: $('#message').val()
+	    },
+	    function(data, status){
+	        if(status == 'success') {
+
+						console.log(data);
+
+						$("#send_button").html('Enviado!');
+					}
+	    });
+	});
+
+		</script>
+	</body>
+</html>
