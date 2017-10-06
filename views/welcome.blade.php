@@ -62,16 +62,12 @@
 					<a href="#">Contact</a>
 				</p> --}}
 				<div class="footer-company-name">
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<!-- andreugarcia -->
 					<ins class="adsbygoogle"
 					     style="display:block"
 					     data-ad-client="ca-pub-4156199932712390"
 					     data-ad-slot="5578929975"
 					     data-ad-format="auto"></ins>
-					<script>
-						(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
 				</div>
 				<div class="footer-icons">
 					<a target="_blank" rel="nofollow" href="https://www.facebook.com/anduwet"><i class="fa fa-facebook"></i></a>
@@ -257,5 +253,11 @@
 	});
 
 	</script>
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+
 </body>
 </html>
