@@ -441,6 +441,7 @@ border: 0;
 
 .footer-distributed .footer-left{
 	float: left;
+	max-width: 50%
 }
 
 /* The company logo */
@@ -504,6 +505,7 @@ border: 0;
 
 .footer-distributed .footer-right{
 	float: right;
+	max-width: 50%
 }
 
 .footer-distributed .footer-right p{

@@ -8,6 +8,16 @@
 	<meta name="description" content="Decorative &amp; interactive isometric &amp; 3D grids." />
 	<meta name="keywords" content="isometric, grid, images, masonry, perspective" />
 
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107688108-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-107688108-1');
+	</script>
+
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -42,21 +52,27 @@
 		</section> --}}
 		<footer class="footer-distributed">
 			<div class="footer-left">
-				<h3>Andreu<span>GM</span></h3>
-				<p class="footer-links">
-					<a href="#">Home</a>
-					·
-					<a href="#">Blog</a>
-					·
-					<a href="#">Pricing</a>
-					·
-					<a href="#">About</a>
-					·
-					<a href="#">Faq</a>
-					·
+				<h3>Andreu García Martínez <small><span><small>&copy; {{ date('Y') }}</small></span></small></h3>
+				{{-- <p class="footer-links">
+					<a href="#">Home</a>·
+					<a href="#">Blog</a>·
+					<a href="#">Pricing</a>·
+					<a href="#">About</a>·
+					<a href="#">Faq</a>·
 					<a href="#">Contact</a>
-				</p>
-				<p class="footer-company-name">Andreu García Martínez &copy; {{ date('Y') }}</p>
+				</p> --}}
+				<div class="footer-company-name">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- andreugarcia -->
+					<ins class="adsbygoogle"
+					     style="display:block"
+					     data-ad-client="ca-pub-4156199932712390"
+					     data-ad-slot="5578929975"
+					     data-ad-format="auto"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
 				<div class="footer-icons">
 					<a target="_blank" rel="nofollow" href="https://www.facebook.com/anduwet"><i class="fa fa-facebook"></i></a>
 					<a target="_blank" rel="nofollow" href="https://twitter.com/andreu55"><i class="fa fa-twitter"></i></a>
