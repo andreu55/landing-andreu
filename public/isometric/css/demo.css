@@ -472,11 +472,12 @@ border: 0;
 }
 
 .footer-distributed .footer-company-name{
-	color:  #8f9296;
+	/*color:  #8f9296;
 	font-size: 14px;
 	font-weight: normal;
-	margin: 0;
-	height: 100px;
+	margin: 0;*/
+	height: 50px;
+	margin-top: 15px;
 }
 
 /* Footer social icons */
