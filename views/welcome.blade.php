@@ -254,9 +254,15 @@
 
 	</script>
 
+	<script src="/js/ads.js"></script>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
+		if( window.canRunAds === undefined ){
+			// adblocker detected, show fallback
+			$('.footer-company-name').html("<h2>Adblock Detected</h2><p>Acho, que tengo que comel</p>");
+		} else {
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		}
 	</script>
 
 </body>
