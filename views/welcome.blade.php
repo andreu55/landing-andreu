@@ -257,12 +257,12 @@
 	<script src="{{ asset('isometric/js/ads.js') }}"></script>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script>
-		if( window.canRunAds === undefined ){
-			// adblocker detected, show fallback
-			$('.footer-company-name').html("<h2>Adblock Detected</h2><p>Acho, que tengo que comel</p>");
-		} else {
+		// if( window.canRunAds === undefined ){
+		// 	// adblocker detected, show fallback
+		// 	$('.footer-company-name').html("<h2>Adblock Detected</h2><p>Acho pijo</p>");
+		// } else {
 			(adsbygoogle = window.adsbygoogle || []).push({});
-		}
+		// }
 	</script>
 
 </body>
