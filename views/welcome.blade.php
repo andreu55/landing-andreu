@@ -254,7 +254,7 @@
 
 	</script>
 
-	<script src="isometric/js/ads.js"></script>
+	<script src="{{ asset('isometric/js/ads.js') }}"></script>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script>
 		if( window.canRunAds === undefined ){
