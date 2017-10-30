@@ -382,7 +382,7 @@ transition: all 500ms 875ms;
 cursor: ne-resize;
 position: absolute;
 top: 5px;
-right: 35px;
+right: 20px;
 color: #FFF;
 width: 15px;
 height: 15px;
@@ -448,7 +448,7 @@ border: 0;
 
 .footer-distributed h3{
 	color:  #ffffff;
-	font: normal 36px 'Cookie', cursive;
+	font-size: 36px;
 	margin: 0 0 10px;
 }
 
