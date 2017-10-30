@@ -315,12 +315,18 @@ opacity: 1;
 -webkit-transition: all 500ms 700ms;
 transition: all 500ms 700ms;
 }
-.modal-box ul {
+.fade_molon {
+	list-style-type: none;
+	text-align: left;
+}
+.modal-space {
+	margin: 40px 70px;
+}
+.modal-box .bloque_fade {
 /*position: absolute;
 top: 85%;
 left: 50%;*/
 margin: 0;
-padding: 30px;
 list-style-type: none;
 /*-webkit-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);*/
@@ -338,7 +344,7 @@ position: relative;
 font-weight: 300;
 text-decoration: none;
 letter-spacing: 3px;
-text-transform: uppercase;
+/*text-transform: uppercase;*/
 color: #fff;
 }
 .modal-box a:before, .modal-box a:after {
@@ -357,25 +363,25 @@ background-color: #fff;
 .modal-box a:hover:after {
 width: 100%;
 }
-.modal-box.is-open li:nth-child(1) {
+.modal-box.is-open .fade_molon:nth-child(1) {
 -webkit-transition: all 500ms 575ms;
 transition: all 500ms 575ms;
 }
-.modal-box.is-open li:nth-child(2) {
+.modal-box.is-open .fade_molon:nth-child(2) {
 -webkit-transition: all 500ms 650ms;
 transition: all 500ms 650ms;
 }
-.modal-box.is-open li:nth-child(3) {
--webkit-transition: all 500ms 725ms;
-transition: all 500ms 725ms;
+.modal-box.is-open .fade_molon:nth-child(3) {
+-webkit-transition: all 500ms 700ms;
+transition: all 500ms 700ms;
 }
-.modal-box.is-open li:nth-child(4) {
+.modal-box.is-open .fade_molon:nth-child(4) {
 -webkit-transition: all 500ms 800ms;
 transition: all 500ms 800ms;
 }
-.modal-box.is-open li:nth-child(5) {
--webkit-transition: all 500ms 875ms;
-transition: all 500ms 875ms;
+.modal-box.is-open .fade_molon:nth-child(5) {
+-webkit-transition: all 500ms 1000ms;
+transition: all 500ms 1000ms;
 }
 
 .modal-close {
@@ -577,6 +583,9 @@ border: 0;
 	cursor: pointer;
 }
 
+.bloque_molon { width:50%; float:left }
+.pad-22 { padding: 0 22px; }
+
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 1000px) {
@@ -628,4 +637,9 @@ border: 0;
 	.footer-distributed .form #send_button{
 		float: none;
 	}
+
+	.mobile-hide { display: none !important; }
+
+	.bloque_molon { width:100% }
+	.pad-22 { padding: 0; }
 }

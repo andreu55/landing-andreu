@@ -123,6 +123,7 @@
 		$('#modal-title').html($(this).data('title'));
 		$('#modal-content').html($(this).data('content'));
 		$('#modal-img').attr('src', $(this).attr('src'));
+		$('#modal-url').attr('href', $(this).data('socialurl'));
 
 		$modal.css({
 			top: 0,

@@ -10,16 +10,31 @@
 			<p class="section__subtitle">To raise new questions, new possibilities, to regard old problems from a new angle, requires creative imagination and marks real advance in science.</p>
 			<div class="isolayer isolayer--deco4">
 				<ul class="grid">
-					@foreach ($portfolio as $key => $i)
+
+					@for ($i=0; $i < $total; $i++)
+
+						@php
+							// Recorremos el array randomizado y sacamos el resto del total real para elegir una posicion del portfolio
+							$p = $rand[$i] % $total_real;
+						@endphp
+
 						<li class="grid__item">
-							<a href="{{ $i['url'] }}" class="grid__link">
+							<a href="{{ $portfolio[$p]['url'] }}" class="grid__link">
 								<div class="layer"></div>
 								<div class="layer"></div>
 								<div class="layer"></div>
-								<img data-title="{{ $i['title'] }}" data-content="{{ $i['content'] }}" data-atype="{{ $i['atype'] }}" class="modal-open grid__img layer" src="{{ asset($i['img']) }}" alt="{{ $i['alt'] }}" />
+								<img
+									data-title="{{ $portfolio[$p]['title'] }}"
+									data-content="{{ $portfolio[$p]['content'] }}"
+									data-atype="{{ $portfolio[$p]['atype'] }}"
+									data-socialurl="{{ $portfolio[$p]['social_url'] }}"
+									class="modal-open grid__img layer"
+									src="{{ asset($portfolio[$p]['img']) }}"
+									alt="{{ $portfolio[$p]['alt'] }}" />
 							</a>
 						</li>
-					@endforeach
+
+					@endfor
 				</ul>
 			</div>
 		</section>
@@ -33,24 +48,28 @@
 		<div class="modal-box-content">
 			<section class="section">
 				<div style="margin-top:150px">
-					<div style="width:50%; float:left">
-						<div style="padding:0 22px; text-align:center">
+					<div class="bloque_molon mobile-hide">
+						<div class="pad-22" style="text-align:center">
 							<img id="modal-img" src="#" alt="img_modal" style="width:100%;opacity:1">
 						</div>
 					</div>
-					<div style="width:50%; float:left">
-						<div style="padding:0 22px">
-							<h3 id="modal-title">Titulaco modal</h3>
-							<div id="modal-content">
-								{{-- Descripción del modal aquí --}}
+					<div class="bloque_molon">
+						<div class="pad-22">
+							<div class="bloque_fade">
+								<li class="fade_molon">
+									<h3 id="modal-title">The titulaco</h3>
+								</li>
+								<li class="fade_molon">
+									<div id="modal-content">
+										{{-- Descripción del modal aquí --}}
+									</div>
+								</li>
+								<li class="fade_molon">
+									<hr class="modal-space">
+								</li>
+								<li class="fade_molon"><a id="modal-url" target="_blank" href="#">Ver página</a></li>
+								<li class="fade_molon"><a id="modal-url-face" target="_blank" href="#">Facebook</a></li>
 							</div>
-							<ul>
-								<li><a href="#">One</a></li>
-								<li><a href="#">Two</a></li>
-								<li><a href="#">Three</a></li>
-								<li><a href="#">Four</a></li>
-								<li><a href="#">Five</a></li>
-							</ul>
 						</div>
 					</div>
 				</div>
