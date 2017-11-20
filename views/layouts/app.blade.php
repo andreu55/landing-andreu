@@ -21,10 +21,10 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/demo.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('isometric/css/component.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/demo.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/component.css') }}" />
 
-	{{-- <script src="{{ asset('isometric/js/modernizr.custom.js') }}"></script> --}}
+	{{-- <script src="{{ asset('js/modernizr.custom.js') }}"></script> --}}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
 </head>
 <body class="demo-2">
@@ -37,7 +37,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js" integrity="sha256-YFADoQJIYFj+isdXssMGUrmsVNbVDfN5m8jPgVN+9m4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dynamics.js/1.1.5/dynamics.min.js" integrity="sha256-KJT8Gf8olUvzOOOUg4gWhGDrAMEeligP2FzCI2WsBY0=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js" integrity="sha256-6O5DljdGA6AiaEVC/Zn8pNLNbQGparYTI9091fGX64k=" crossorigin="anonymous"></script>
-	<script src="{{ asset('isometric/js/main.js') }}"></script>
+	<script src="{{ asset('js/main.js') }}"></script>
 
 	<script>
 
@@ -166,7 +166,7 @@
 
 	</script>
 
-	<script src="{{ asset('isometric/js/ads.js') }}"></script>
+	<script src="{{ asset('js/ads.js') }}"></script>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script>
 		// if( window.canRunAds === undefined ){

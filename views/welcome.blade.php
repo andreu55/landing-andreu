@@ -19,14 +19,14 @@
 						@endphp
 
 						<li class="grid__item">
-							<a href="{{ $portfolio[$p]['url'] }}" class="grid__link">
+							<a href="#" class="grid__link">
 								<div class="layer"></div>
 								<div class="layer"></div>
 								<div class="layer"></div>
 								<img
 									data-title="{{ $portfolio[$p]['title'] }}"
 									data-content="{{ $portfolio[$p]['content'] }}"
-									data-atype="{{ $portfolio[$p]['atype'] }}"
+									{{-- data-atype="{{ $portfolio[$p]['atype'] }}" --}}
 									data-socialurl="{{ $portfolio[$p]['social_url'] }}"
 									class="modal-open grid__img layer"
 									src="{{ asset($portfolio[$p]['img']) }}"
@@ -49,8 +49,8 @@
 			<section class="section">
 				<div style="margin-top:150px">
 					<div class="bloque_molon mobile-hide">
-						<div class="pad-22" style="text-align:center">
-							<img id="modal-img" src="#" alt="img_modal" style="width:100%;opacity:1">
+						<div class="pad-22 text-center op">
+							<img id="modal-img" src="#" alt="img_modal">
 						</div>
 					</div>
 					<div class="bloque_molon">

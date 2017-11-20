@@ -297,8 +297,9 @@ width: 0;
 height: 2px;
 color: #fff;
 /*background-color: #505050;*/
-background: linear-gradient(20deg, #C1C7DF, #4C51E5);
-opacity: 0.95;
+
+background: linear-gradient(20deg, rgba(193, 199, 223, 0.95), rgba(76, 81, 229, 0.95));
+/*opacity: 0.95;*/
 z-index: 2;
 -webkit-transition: width 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), left 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), height 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), top 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
 transition: width 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), left 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), height 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), top 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -642,4 +643,15 @@ border: 0;
 
 	.bloque_molon { width:100% }
 	.pad-22 { padding: 0; }
+}
+
+.text-center {
+	text-align:center;
+}
+
+.op img {
+	width: 100%;
+	border-radius: 3px;
+	box-shadow: -5px 5px 15px #777;
+	background: linear-gradient(20deg, rgba(193, 199, 223, 1), rgba(76, 81, 229, 1));
 }
