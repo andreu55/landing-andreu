@@ -645,13 +645,11 @@ border: 0;
 	.pad-22 { padding: 0; }
 }
 
-.text-center {
-	text-align:center;
-}
+.text-center { text-align:center; }
 
 .op img {
 	width: 100%;
-	border-radius: 3px;
+	border-radius: 7px 30px 0 0;
 	box-shadow: -5px 5px 15px #777;
 	background: linear-gradient(20deg, rgba(193, 199, 223, 1), rgba(76, 81, 229, 1));
 }

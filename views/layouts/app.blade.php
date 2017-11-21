@@ -123,7 +123,7 @@
 		$('#modal-title').html($(this).data('title'));
 		$('#modal-content').html($(this).data('content'));
 		$('#modal-img').attr('src', $(this).attr('src'));
-		$('#modal-url').attr('href', $(this).data('socialurl'));
+		$('.modal-url').attr('href', $(this).data('socialurl'));
 
 		$modal.css({
 			top: 0,
@@ -144,6 +144,10 @@
 		}).removeClass('is-open');
 	});
 
+	// Si pulsan escape, se cierra el modal
+	$(document).keyup(function(e) {
+  	if (e.keyCode === 27) $close.trigger('click');
+	});
 
 	$("#send_button").click(function(){
 

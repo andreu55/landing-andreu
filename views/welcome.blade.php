@@ -50,7 +50,9 @@
 				<div style="margin-top:150px">
 					<div class="bloque_molon mobile-hide">
 						<div class="pad-22 text-center op">
-							<img id="modal-img" src="#" alt="img_modal">
+							<a target="_blank" class="modal-url" rel="nofollow" href="#">
+								<img id="modal-img" src="#" alt="img_modal">
+							</a>
 						</div>
 					</div>
 					<div class="bloque_molon">
@@ -67,8 +69,8 @@
 								<li class="fade_molon">
 									<hr class="modal-space">
 								</li>
-								<li class="fade_molon"><a id="modal-url" target="_blank" href="#">Ver página</a></li>
-								<li class="fade_molon"><a id="modal-url-face" target="_blank" href="#">Facebook</a></li>
+								<li class="fade_molon"><a class="modal-url" target="_blank" rel="nofollow" href="#">Ver página</a></li>
+								<li class="fade_molon"><a id="modal-url-face" target="_blank" rel="nofollow" href="#">Facebook</a></li>
 							</div>
 						</div>
 					</div>

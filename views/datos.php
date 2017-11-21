@@ -34,35 +34,29 @@ $data['portfolio'] = [
     'content' => 'Soy el content del modal 05',
     'social_url' => 'https://afactys.com/'
   ],[
-    'img' => 'img/proj/6.png',
-    'alt' => '06',
-    'title' => 'Soy el modal 06',
-    'content' => 'Soy el content del modal 06',
-    'social_url' => 'https://afactys.com/'
+    'img' => 'img/proj/golftab.png',
+    'alt' => 'GolfTab',
+    'title' => 'GolfTab, gestor de escuelas de Golf',
+    'content' => 'GolfTab es una nueva app que permite a los jugadores conectarse con sus escuelas y sus profesores. Mediante GolfTab podrás anotar tus resultados y estudiar tus estadísticas pero también podrás comprobar si logras completar los objetivos puestos por tu profesor y visualizar tu mejora.',
+    'social_url' => 'http://golf-tab.com/'
   ],[
-    'img' => 'img/proj/7.png',
-    'alt' => '07',
-    'title' => 'Soy el modal 07',
+    'img' => 'img/proj/inspire.png',
+    'alt' => 'Inspire',
+    'title' => 'Inspire, encuentra tu inspiración',
     'content' => 'Soy el content del modal 07',
-    'social_url' => 'https://afactys.com/'
+    'social_url' => 'http://writermuse.es/'
   ],[
-    'img' => 'img/proj/8.png',
-    'alt' => '08',
-    'title' => 'Soy el modal 08',
+    'img' => 'img/proj/writermuse.png',
+    'alt' => 'Writermuse',
+    'title' => 'Writermuse, Escribe. Inspira',
     'content' => 'Soy el content del modal 08',
-    'social_url' => 'https://afactys.com/'
+    'social_url' => 'http://writermuse.es/'
   ],[
-    'img' => 'img/proj/9.png',
-    'alt' => '09',
-    'title' => 'Soy el modal 09',
+    'img' => 'img/proj/mtornero.png',
+    'alt' => 'Marta Tornero',
+    'title' => 'Marta Tornero',
     'content' => 'Soy el content del modal 09',
-    'social_url' => 'https://afactys.com/'
-  ],[
-    'img' => 'img/proj/10.png',
-    'alt' => '10',
-    'title' => 'Soy el modal 10',
-    'content' => 'Soy el content del modal 10',
-    'social_url' => 'https://afactys.com/'
+    'social_url' => 'http://mtornero.com/'
   ]
 ];
 
