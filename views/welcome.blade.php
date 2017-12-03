@@ -4,10 +4,13 @@
 
 @section('content')
 
-	<main>
-		<section class="section section--shots section--right">
-			<h2 class="section__heading">Imagine {{-- <em>is</em> --}} Everything</h2>
-			<p class="section__subtitle">To raise new questions, new possibilities, to regard old problems from a new angle, requires creative imagination and marks real advance in science.</p>
+	<main id="fullpage">
+		<div data-anchor="portfolio" id="gradient" class="section section--shots section--right">
+			<h2 class="thefont section__heading">El <em>infinito</em> es tuyo</h2>
+			<p class="thefont section__subtitle">
+				Si puedes imaginarlo, puedes hacerlo.<br>
+				¿Tienes un proyecto en mente? Hablemos.
+			</p>
 			<div class="isolayer isolayer--deco4">
 				<ul class="grid">
 
@@ -37,9 +40,143 @@
 					@endfor
 				</ul>
 			</div>
-		</section>
+		</div>
 
-		@include('layouts.footer')
+		{{-- <div data-anchor="info" class="section">
+			@include('layouts.footer')
+		</div> --}}
+
+		<div data-anchor="info" class="section" style="padding:2em; background: linear-gradient(340deg, #5C61F5, #D1D7EF);">
+			<div class="container">
+	      <!-- row -->
+	      <div class="row">
+	          <aside class="col l4 m12 s12 sidebar z-depth-1" id="sidebar">
+	              <div class="row">
+	                  <div class="heading">
+	                      <div class="feature-img">
+	                          <a href="#">
+															<img src="{{ asset('img/proj/me.jpg') }}" class="responsive-img" alt="">
+														</a>
+	                      </div>
+	                      <div class="title col s12 m12">
+	                          <h2 class="thefont">Andreu García</h2>
+	                      </div>
+	                  </div>
+	                  <div class="col l12 m12 s12 skills sidebar-item">
+	                      <div class="row">
+	                          <div class="col m12 l3 s12 icon">
+	                              <i class="fa fa-2x fa-calendar-o"></i> <!-- icon -->
+	                          </div>
+	                           <!-- Skills -->
+	                          <div class="col m12 l9 s12 skill-line a5">
+	                              <h3>Professional Skills</h3>
+
+	                              <span>Adobe Photoshop</span>
+	                              <div class="progress">
+	                                  <div class="determinate" style="width: 60%;"><i class="fa fa-circle"></i></div>
+	                              </div>
+
+	                              <span>HTML 5</span>
+	                              <div class="progress">
+	                                  <div class="determinate" style="width: 95%;"><i class="fa fa-circle"></i></div>
+	                              </div>
+
+	                              <span>CSS 3</span>
+	                              <div class="progress">
+	                                  <div class="determinate" style="width: 90%;"><i class="fa fa-circle"></i></div>
+	                              </div>
+
+	                              <span>Javascript</span>
+	                              <div class="progress">
+	                                  <div class="determinate" style="width: 75%;"><i class="fa fa-circle"></i></div>
+	                              </div>
+
+	                              <span>PHP 7</span>
+	                              <div class="progress">
+	                                  <div class="determinate" style="width: 96%;"><i class="fa fa-circle"></i></div>
+	                              </div>
+
+																<span>Angular 5</span>
+	                              <div class="progress">
+	                                  <div class="determinate" style="width: 35%;"><i class="fa fa-circle"></i></div>
+	                              </div>
+
+	                              <span>Vue 2</span>
+	                              <div class="progress">
+	                                  <div class="determinate" style="width: 40%;"><i class="fa fa-circle"></i></div>
+	                              </div>
+
+	                              <span>SQL</span>
+	                              <div class="progress">
+	                                  <div class="determinate" style="width: 80%;"><i class="fa fa-circle"></i></div>
+	                              </div>
+
+																<span>Laravel 5.5</span>
+	                              <div class="progress">
+	                                  <div class="determinate" style="width: 85%;"><i class="fa fa-circle"></i></div>
+	                              </div>
+	                          </div>
+	                      </div>
+	                  </div>
+	              </div>
+	          </aside>
+
+	          <section class="col s12 m12 l8 section" id="theinfo">
+	              <div class="cover-latter z-depth-1">
+	                  <div class="cover-title">
+											@php
+												$hora = date('G');
+												if ($hora > 0 && $hora <= 6) { $texto = "¡¿Que haces a estas horas despierto?!"; }
+												elseif ($hora > 6 && $hora <= 13) { $texto = "¡Buenos días!"; }
+												elseif ($hora > 13 && $hora <= 15) { $texto = "¡Que aproveche!"; }
+												elseif ($hora > 15 && $hora <= 20) { $texto = "¡Buenas tardes!"; }
+												elseif ($hora > 20 && $hora <= 24) { $texto = "¡Buenas noches!"; }
+											@endphp
+	                      <span>
+													{{-- Buenas! --}}
+													<i class="fa fa-fw fa-quote-left" aria-hidden="true" style="font-size:1.3em"></i> <?= $texto ?>
+												</span>
+												<em class="pull-right"><?= date('j/m/Y') ?></em>
+	                      <h2>Andreu García Martínez</h2>
+	                      <p>
+													Front &amp; BackEnd Developer<br>
+													Computer engineer<br>
+													Lindy hop dancer
+	                      </p>
+	                  </div>
+	                  <h4 class="cover-title">Dear Sir/Madam</h4>
+	                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna velit, lacinia ac mauris in, dictum tristique dolor.
+	                  Maecenas porttitor, elit a auctor tempor, libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus sodales risus a
+	                  consectetur. Sed tristique vitae quam a tincidunt. libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus sodales
+	                  risus a consectetur. Sed tristique vitae quam a tincidunt</p>
+
+	                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna velit, lacinia ac mauris in, dictum tristique dolor.
+	                  Maecenas porttitor, elit a auctor tempor, libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus sodales risus a
+	                  consectetur. Sed tristique vitae quam a tincidunt.libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus sodales
+	                  risus a consectetur. Sed tristique vitae quam a tincidunt</p>
+
+	                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna velit, lacinia ac mauris in, dictum tristique dolor.
+	                  Maecenas porttitor, elit a auctor tempor, libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus sodales risus a
+	                  consectetur. Sed tristique vitae quam a tincidunt</p>
+	                  <div class="cover-title">
+	                      <p>Your Sincerely</p>
+	                  </div>
+	                  <div class="signature">
+	                      <img src="{{ asset('img/firma_andreu.png') }}" alt="" height="100" class="img-responsive">
+	                      <h4>Al Rayhan</h4>
+	                      <h5> UI &amp; UX Designer </h5>
+	                      <span>Sylhet, Bangladesh</span>
+	                  </div>
+	              </div>
+	          </section>
+	      </div><!-- end row -->
+	  	</div>
+		</div>
+
+
+		<div data-anchor="contacto" class="section">
+			@include('layouts.footer')
+		</div>
 
 	</main>
 

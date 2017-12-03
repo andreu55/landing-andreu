@@ -3,23 +3,19 @@
 </section> --}}
 <footer class="footer-distributed">
   <div class="footer-left">
-    <h3>Andreu García Martínez <small><span><small>&copy; {{ date('Y') }}</small></span></small></h3>
-    {{-- <p class="footer-links">
+    <h3>
+      Andreu García Martínez
+      <span style="font-size:15px">&copy; {{ date('Y') }}</span>
+    </h3>
+    <p class="footer-links">
       <a href="#">Home</a>·
       <a href="#">Blog</a>·
       <a href="#">Pricing</a>·
       <a href="#">About</a>·
       <a href="#">Faq</a>·
       <a href="#">Contact</a>
-    </p> --}}
-    <div class="footer-company-name">
-      <!-- andreugarcia -->
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-4156199932712390"
-           data-ad-slot="5578929975"
-           data-ad-format="auto"></ins>
-    </div>
+    </p>
+    {{-- <div class="footer-company-name"></div> --}}
     <div class="footer-icons">
       <a target="_blank" rel="nofollow" href="https://www.facebook.com/anduwet"><i class="fa fa-facebook"></i></a>
       <a target="_blank" rel="nofollow" href="https://twitter.com/andreu55"><i class="fa fa-twitter"></i></a>

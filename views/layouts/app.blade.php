@@ -14,13 +14,14 @@
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-
 	  gtag('config', 'UA-107688108-1');
 	</script>
 
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css" integrity="sha256-MWBJX/7o3UIX5sMN/izdthod08WoIcWN0HOP7/X8+48=" crossorigin="anonymous" /> --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/demo.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/component.css') }}" />
 
@@ -98,7 +99,6 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script>
 
-
 	var $trigger = $('.modal-open');
 	var $close = $('.modal-close');
 	var $modal = $('.modal-box');
@@ -168,17 +168,80 @@
 		});
 	});
 
+	var colors = new Array(
+		[67, 123, 154],
+		[205, 226, 237],
+		[203, 229, 236],
+		[209, 215, 239]
+		// [255, 244, 219],
+		);
+
+		var step = 0;
+		//color table indices for:
+		// current color left
+		// next color left
+		// current color right
+		// next color right
+		var colorIndices = [0,1,2,3];
+
+		//transition speed
+		var gradientSpeed = 0.002;
+
+		function updateGradient()
+		{
+
+		if ( $===undefined ) return;
+
+		var c0_0 = colors[colorIndices[0]];
+		var c0_1 = colors[colorIndices[1]];
+		var c1_0 = colors[colorIndices[2]];
+		var c1_1 = colors[colorIndices[3]];
+
+		var istep = 1 - step;
+		var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+		var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+		var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+		var color1 = "rgb("+r1+","+g1+","+b1+")";
+
+		var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+		var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+		var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+		var color2 = "rgb("+r2+","+g2+","+b2+")";
+
+		$('#gradient').css({ background: "linear-gradient(20deg, "+color1+", "+color2+")" });
+
+		step += gradientSpeed;
+		if ( step >= 1 )
+		{
+			step %= 1;
+			colorIndices[0] = colorIndices[1];
+			colorIndices[2] = colorIndices[3];
+
+			//pick two new target color indices
+			//do not pick the same as the current one
+			colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+			colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+
+		}
+		}
+
+		setInterval(updateGradient,10);
+
 	</script>
 
-	<script src="{{ asset('js/ads.js') }}"></script>
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-		// if( window.canRunAds === undefined ){
-		// 	// adblocker detected, show fallback
-		// 	$('.footer-company-name').html("<h2>Adblock Detected</h2><p>Acho pijo</p>");
-		// } else {
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		// }
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.js" integrity="sha256-SwWHEBZICAfuD82HWp9i1VmxX0dXjllMm6cNKvucHAY=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors:['portfolio', 'info', 'contacto'],
+				scrollingSpeed: 650,
+				css3: false,
+				// lockAnchors: false,
+				// keyboardScrolling: true,
+				// animateAnchor: true,
+				// dragAndMove: true,
+			});
+		});
 	</script>
 
 </body>
