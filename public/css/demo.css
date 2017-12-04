@@ -591,9 +591,22 @@ border: 0;
 .bloque_molon { width:50%; float:left }
 .pad-22 { padding: 0 22px; }
 
+.section-info {
+	padding: 1.5em;
+  background: linear-gradient(340deg, #5C61F5, #D1D7EF);
+}
+
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 1000px) {
+
+	.section-info {
+		padding: 0.5em;
+	}
+
+	.section-info p {
+		font-size: 11pt;
+	}
 
 	.footer-distributed {
 		font: bold 14px sans-serif;
@@ -1038,13 +1051,9 @@ h5 {
   background-color: #fff;
   padding: 20px 50px !important;
 }
-/* style for
-    **************
-   * Cover latter *
 
-*/
 .cover-latter {
-  padding: 30px;
+  padding: 5px 30px 15px;
   margin-right: 5px;
   margin-bottom: 24px;
   background-color: white;

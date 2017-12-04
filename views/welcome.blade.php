@@ -46,11 +46,11 @@
 			@include('layouts.footer')
 		</div> --}}
 
-		<div data-anchor="info" class="section" style="padding:2em; background: linear-gradient(340deg, #5C61F5, #D1D7EF);">
+		<div data-anchor="info" class="section section-info">
 			<div class="container">
 	      <!-- row -->
 	      <div class="row">
-	          <aside class="col l4 m12 s12 sidebar z-depth-1" id="sidebar">
+	          <aside class="col l4 m12 s12 sidebar z-depth-1 hide-on-small-only" id="sidebar">
 	              <div class="row">
 	                  <div class="heading">
 	                      <div class="feature-img">
@@ -126,16 +126,12 @@
 	                  <div class="cover-title">
 											@php
 												$hora = date('G');
-												if ($hora > 0 && $hora <= 6) { $texto = "¡¿Que haces a estas horas despierto?!"; }
+												if ($hora >= 0 && $hora <= 6) { $texto = "¡¿Que haces a estas horas despierto?!"; }
 												elseif ($hora > 6 && $hora <= 13) { $texto = "¡Buenos días!"; }
 												elseif ($hora > 13 && $hora <= 15) { $texto = "¡Que aproveche!"; }
 												elseif ($hora > 15 && $hora <= 20) { $texto = "¡Buenas tardes!"; }
 												elseif ($hora > 20 && $hora <= 24) { $texto = "¡Buenas noches!"; }
 											@endphp
-	                      <span>
-													{{-- Buenas! --}}
-													<i class="fa fa-fw fa-quote-left" aria-hidden="true" style="font-size:1.3em"></i> <?= $texto ?>
-												</span>
 												<em class="pull-right"><?= date('j/m/Y') ?></em>
 	                      <h2>Andreu García Martínez</h2>
 	                      <p>
@@ -144,28 +140,18 @@
 													Lindy hop dancer
 	                      </p>
 	                  </div>
-	                  <h4 class="cover-title">Dear Sir/Madam</h4>
-	                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna velit, lacinia ac mauris in, dictum tristique dolor.
-	                  Maecenas porttitor, elit a auctor tempor, libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus sodales risus a
-	                  consectetur. Sed tristique vitae quam a tincidunt. libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus sodales
-	                  risus a consectetur. Sed tristique vitae quam a tincidunt</p>
-
-	                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna velit, lacinia ac mauris in, dictum tristique dolor.
-	                  Maecenas porttitor, elit a auctor tempor, libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus sodales risus a
-	                  consectetur. Sed tristique vitae quam a tincidunt.libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus sodales
-	                  risus a consectetur. Sed tristique vitae quam a tincidunt</p>
-
-	                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna velit, lacinia ac mauris in, dictum tristique dolor.
-	                  Maecenas porttitor, elit a auctor tempor, libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus sodales risus a
-	                  consectetur. Sed tristique vitae quam a tincidunt</p>
-	                  <div class="cover-title">
-	                      <p>Your Sincerely</p>
-	                  </div>
+	                  <h4 class="cover-title">
+											{{-- Buenas! --}}
+											<i class="fa fa-fw fa-quote-left" aria-hidden="true" style="font-size:1.3em"></i> <?= $texto ?>
+										</h4>
+	                  <p>Soy programador de aplicaciones web front &amp; backEnd y project manager por las mañanas. Profesor de Lindy Hop por la tarde.</p>
+										<p>Si no me encuentras frente a la pantalla, búscame en la pista de baile.</p>
+										<p>Me apasiona solucionar problemas y encontrar la manera más eficiente de hacer las cosas.</p>
+										<p>También me gusta definir un proyecto lo mejor posible con el cliente para optimizar la aplicación desde el principio y evitar malentendidos, ¡aunque los cambios son inevitables!</p>
+	                  <p>Por contrapartida, para gran frustración de mi project manager, no dejo de intentar solucionar cada error del código, es como si llevaras el coche al mecánico porque no funcionan las luces y además te arreglara el asiento, la dirección y la correa de distribución porque estaban a punto de estropearse.</p>
+	                  <p>Trabajo principalmente con Laravel, Angular, (...).</p>
 	                  <div class="signature">
-	                      <img src="{{ asset('img/firma_andreu.png') }}" alt="" height="100" class="img-responsive">
-	                      <h4>Al Rayhan</h4>
-	                      <h5> UI &amp; UX Designer </h5>
-	                      <span>Sylhet, Bangladesh</span>
+	                  	<img src="{{ asset('img/firma_andreu.png') }}" alt="" height="100" class="img-responsive">
 	                  </div>
 	              </div>
 	          </section>
@@ -174,9 +160,10 @@
 		</div>
 
 
-		<div data-anchor="contacto" class="section">
+		{{-- <div data-anchor="contacto" class="section">
 			@include('layouts.footer')
-		</div>
+		</div> --}}
+		
 
 	</main>
 
