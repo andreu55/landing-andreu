@@ -159,11 +159,45 @@
 	  	</div>
 		</div>
 
+		{{-- data-anchor="contacto" --}}
+		<div class="section" style="background:#FFF">
 
-		{{-- <div data-anchor="contacto" class="section">
-			@include('layouts.footer')
-		</div> --}}
-		
+			{{-- @include('layouts.footer') --}}
+
+			<div class="container">
+				<div class="row">
+			    <form class="col s12">
+						<h1>Contacto</h1>
+			      <div class="row">
+							<div class="input-field col s6">
+			          <input id="email" type="email" class="validate">
+			          <label for="email">Email</label>
+			        </div>
+			        <div class="input-field col s6">
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col s12">
+			          <input id="message" type="text">
+			          <label for="message">Mensaje</label>
+			        </div>
+			      </div>
+			    </form>
+					<div class="col s6">
+						<div class="footer-distributed">
+					    <div class="footer-icons">
+					      <a target="_blank" rel="nofollow" href="https://www.facebook.com/anduwet"><i class="fa fa-facebook"></i></a>
+					      <a target="_blank" rel="nofollow" href="https://twitter.com/andreu55"><i class="fa fa-twitter"></i></a>
+					      <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/andreu-garcia-martinez-69a95061/"><i class="fa fa-linkedin"></i></a>
+					      <a target="_blank" rel="nofollow" href="https://github.com/andreu55"><i class="fa fa-github"></i></a>
+					    </div>
+					  </div>
+					</div>
+			  </div>
+			</div>
+
+		</div>
+
 
 	</main>
 
