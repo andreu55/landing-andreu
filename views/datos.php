@@ -57,6 +57,24 @@ $data['portfolio'] = [
     'title' => 'Marta Tornero',
     'content' => 'Soy el content del modal 09',
     'social_url' => 'http://mtornero.com/'
+  ],[
+    'img' => 'img/proj/neofit.png',
+    'alt' => 'NeoFit',
+    'title' => 'NeoFit',
+    'content' => 'Soy el content Neofit',
+    'social_url' => 'http://neofit.info/'
+  ],[
+    'img' => 'img/proj/vision10.png',
+    'alt' => 'Vision 10',
+    'title' => 'Vision 10',
+    'content' => 'Soy el Vision 10',
+    'social_url' => 'http://www.vision10.es/'
+  ],[
+    'img' => 'img/proj/ofersalud.png',
+    'alt' => 'Ofersalud',
+    'title' => 'Ofersalud',
+    'content' => 'Soy el ofersad',
+    'social_url' => 'https://ofersalud.es/'
   ]
 ];
 

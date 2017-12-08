@@ -233,9 +233,9 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors:['portfolio', 'info', 'contacto'],
-				scrollingSpeed: 650,
-				css3: false,
+				// anchors:['portfolio', 'info', 'contacto'],
+				scrollingSpeed: 750,
+				// css3: false,
 				// lockAnchors: false,
 				// keyboardScrolling: true,
 				// animateAnchor: true,
@@ -243,6 +243,8 @@
 			});
 		});
 	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 </body>
 </html>
