@@ -1,9 +1,11 @@
 <?php
 
-$total = 18;
+$cuadrados_totales = 18;
+$cuadrados_repetidos = 3;
+$total = $cuadrados_totales - $cuadrados_repetidos;
 
 $data['portfolio'] = [
-  [
+  [ // 0
     'img' => 'img/proj/afactys.png',
     'alt' => 'Afactys Artistas',
     'title' => 'Afactys, Red Social de Profesionales del Arte y la Cultura',
@@ -13,7 +15,7 @@ $data['portfolio'] = [
       <p>Fue mi primer proyecto en php con Codeigniter y fue el momento en que me di cuenta de que me quedaba mucho que aprender.</p>
       <p>Programé todo Afactys, desde la validación de los correos hasta la estructura de la base de datos, y por eso le tengo un cariño especial: me enseñó que para ser un buen programador hay que lanzarse a la piscina porque si no nunca sabrás hacer nada.</p>',
     'social_url' => 'https://afactys.com/'
-  ],[
+  ],[ // 1
     'img' => 'img/proj/blackbottom.jpg',
     'alt' => 'Black Bottom, Lindy Hop',
     'title' => 'Black Bottom Lindy Hop',
@@ -22,7 +24,7 @@ $data['portfolio'] = [
       <p>Debí sospechar, lo que alguien llama «sencillo» rara vez lo es: la app de Black Bottom se expandió hasta abarcar asistencias, hojas de contabilidad, login de alumnos, subidas de vídeos para que pudieran repasar en casa…</p>
       <p>Fue una experiencia muy provechosa: ahora siempre programo las aplicaciones para que admitan mucho más de lo que se había pensado en un principio.</p>',
     'social_url' => 'http://www.blackbottom.es/'
-  ],[
+  ],[ // 2
     'img' => 'img/proj/taxovaloracion.jpg',
     'alt' => 'Taxo Valoración',
     'title' => 'Taxo Valoración',
@@ -35,7 +37,7 @@ $data['portfolio'] = [
       <p><b>valoracion.taxo.es</b></p>
       <p>Aplicación web en php desde donde entran los pedidos de tasaciones, habilitada para realizar pagos mediante transferencia y paypal.</p>',
     'social_url' => 'https://taxo.es/'
-  ],[
+  ],[ // 3
     'img' => 'img/proj/solivesa.jpg',
     'alt' => 'Grupo Solivesa',
     'title' => 'Grupo Solivesa',
@@ -44,7 +46,7 @@ $data['portfolio'] = [
       <p>Trabajé junto con un equipo de 3 personas en la creación y expansión de Solivesa en php puro.</p>
       <p>También hicimos una Applicación nativa para SmartPhones con ionic Framework para el front y con Laravel para el Back</p>',
     'social_url' => 'http://www.gruposolivesa.com/'
-  ],[
+  ],[ // 4
     'img' => 'img/proj/wopap.jpg',
     'alt' => 'Wopap',
     'title' => 'Wopap, without papers',
@@ -53,7 +55,7 @@ $data['portfolio'] = [
       <p>Desarrollamos Wopap primero en Laravel al completo, pero después vimos que estábamos limitados y después volvimos a empezarla creando una API en Laravel y una APP en Ionic, para adaptarlo a las necesidades cambiantes del entorno de trabajo y permitir la carga asíncrona de archivos.</p>
       <p>Desde Wopap desarrollamos también Wopap Empresas, para agilizar el trabajo de la sección de recursos humanos: gestión de trabajadores, creación y envío de facturas, contratos y otros documentos.</p>',
     'social_url' => 'https://afactys.com/'
-  ],[
+  ],[ // 5
     'img' => 'img/proj/golftab.png',
     'alt' => 'GolfTab',
     'title' => 'GolfTab, gestor de escuelas de Golf',
@@ -62,7 +64,7 @@ $data['portfolio'] = [
       <p>Desde Golftab surgió una nueva aplicación, FGranks para gestionar partidos de golf, eventos, torneos, calificaciones, etc. a nivel mundial.</p>
       <p>Éramos cuatro personas en el equipo de desarrollo, más los programadores que vinieron antes que nosotros, por lo que Golftab contribuyó bastante a que aprendiera a trabajar en equipos medianos, dividir el trabajo y aunar nuestros esfuerzos de forma efectiva. También aprendí que el golf tiene más miga de lo que parece, la forma de clasificar es diferente en cada país con el dolor de cabeza que suponen las excepciones para un programador.</p>',
     'social_url' => 'http://golf-tab.com/'
-  ],[
+  ],[ // 6
     'img' => 'img/proj/inspire.png',
     'alt' => 'Inspire',
     'title' => 'Inspire, encuentra tu inspiración',
@@ -71,7 +73,7 @@ $data['portfolio'] = [
       <p>Ya hay aplicaciones y webs que ofrecen palabras aleatorias, pero ninguna que se adapte a las necesidades concretas de los escritores, ni tampoco que permitan vincular aleatoriamente ideas que el usuario introduce en el sistema.</p>
       <p>La primera idea la tuvo Marta, mi pareja, pero pronto vimos todo el potencial que podía tener y aún seguimos trabajando en ella; es uno de los peligros de estar demasiado inspirado: no se te acaban las ideas.</p>',
     'social_url' => 'http://writermuse.es/'
-  ],[
+  ],[ // 7
     'img' => 'img/proj/writermuse.png',
     'alt' => 'Writermuse',
     'title' => 'Writermuse, Escribe. Inspira',
@@ -80,7 +82,7 @@ $data['portfolio'] = [
       <p>No suelo trabajar en Wordpress porque «ya está todo hecho», pero no todo es tan sencillo como parece, y cuando buscas programar algo que se sale de lo previsto por la plataforma es necesario adentrarse en una selva de código de la que poca gente ha conseguido escapar.</p>
       <p>Fue un proyecto divertido, donde actualicé mis conocimientos de Wordpress y descubrí que a mí lo que me gusta es solucionar problemas y optimizar código.</p>',
     'social_url' => 'http://writermuse.es/'
-  ],[
+  ],[ // 8
     'img' => 'img/proj/mtornero.png',
     'alt' => 'Marta Tornero',
     'title' => 'Marta Tornero',
@@ -89,24 +91,42 @@ $data['portfolio'] = [
       <p>A primera vista es un proyecto sencillo, una página estática que podría haberse hecho sin programación, pero mi mayor aprendizaje fue convertirme en profesor, porque buena parte de la página la hizo ella con mis instrucciones y con algunas ideas mías.</p>
       <p>Los gifs animados de gatos no fueron cosa mía, por desgracia.</p>',
     'social_url' => 'http://mtornero.com/'
-  ],[
+  ],[ // 9
     'img' => 'img/proj/neofit.png',
     'alt' => 'NeoFit',
     'title' => 'NeoFit',
     'content' => 'En construcción',
     'social_url' => 'http://neofit.info/'
-  ],[
+  ],[ // 10
     'img' => 'img/proj/vision10.png',
     'alt' => 'Vision 10',
     'title' => 'Vision 10',
     'content' => 'En construcción',
     'social_url' => 'http://www.vision10.es/'
-  ],[
+  ],[ // 11
     'img' => 'img/proj/ofersalud.png',
     'alt' => 'Ofersalud',
     'title' => 'Ofersalud',
     'content' => 'En construcción',
     'social_url' => 'https://ofersalud.es/'
+  ],[ // 12
+    'img' => 'img/proj/ecoproject.png',
+    'alt' => 'Eco Projectes',
+    'title' => 'Eco Projectes',
+    'content' => 'En construcción',
+    'social_url' => 'http://eco-project.es/'
+  ],[ // 13
+    'img' => 'img/proj/best.png',
+    'alt' => 'Best Valencia',
+    'title' => 'Best Valencia',
+    'content' => 'En construcción',
+    'social_url' => 'http://blog.bestvalencia.org/'
+  ],[ // 14
+    'img' => 'img/proj/pr1.png',
+    'alt' => 'En construcción',
+    'title' => 'En construcción',
+    'content' => 'En construcción',
+    'social_url' => '#'
   ]
 ];
 
