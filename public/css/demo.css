@@ -606,6 +606,12 @@ p {
   line-height: 17pt;
 }
 
+#modal-content {
+	color: #000;
+	text-align: justify;
+	text-shadow: 1px 1px 3px #EEE;
+}
+
 @media (max-width: 800px) {
 	.section-info { padding: 0.5em; }
 	.section-info p { font-size: 11pt; }

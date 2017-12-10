@@ -45,7 +45,7 @@
 									<hr class="modal-space">
 								</li>
 								<li class="fade_molon"><a class="modal-url" target="_blank" rel="nofollow" href="#">Ver página</a></li>
-								<li class="fade_molon"><a id="modal-url-face" target="_blank" rel="nofollow" href="#">Facebook</a></li>
+								{{-- <li class="fade_molon"><a id="modal-url-face" target="_blank" rel="nofollow" href="#">Facebook</a></li> --}}
 							</div>
 						</div>
 					</div>
