@@ -17,13 +17,11 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 a {
 	outline: none;
 	color: #323F5C;
 	text-decoration: none;
 }
-
 a:hover, a:focus {
 	color: #4d5871;
 	outline: none;
@@ -593,73 +591,19 @@ border: 0;
 
 .section-info {
 	padding: 1.5em;
-  background: linear-gradient(340deg, #5C61F5, #D1D7EF);
+	/*background: linear-gradient(340deg, #5C61F5, #D1D7EF);*/
+  background: linear-gradient(340deg, #ABC5D6, #648CA7);
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 1000px) {
-
-	.section-info {
-		padding: 0.5em;
-	}
-
-	.section-info p {
-		font-size: 11pt;
-	}
-
-	.footer-distributed {
-		font: bold 14px sans-serif;
-	}
-
-	.footer-distributed .footer-company-name{
-		font-size: 12px;
-	}
-
-	.footer-distributed .form input,
-	.footer-distributed .form textarea{
-		width: 250px;
-	}
-
-	.footer-distributed .form #send_button{
-		padding: 10px 35px;
-	}
-
+.social-icons {
+	font-size: 40px;
 }
 
 @media (max-width: 800px) {
-
-	.footer-distributed{
-		padding: 30px;
-	}
-
-	.footer-distributed .footer-left,
-	.footer-distributed .footer-right{
-		float: none;
-		max-width: 300px;
-		margin: 0 auto;
-	}
-
-	.footer-distributed .footer-left{
-		margin-bottom: 40px;
-	}
-
-	.footer-distributed .form{
-		margin-top: 30px;
-	}
-
-	.footer-distributed .form{
-		display: block;
-	}
-
-	.footer-distributed .form #send_button{
-		float: none;
-	}
-
-	.mobile-hide { display: none !important; }
-
-	.bloque_molon { width:100% }
-	.pad-22 { padding: 0; }
+	.section-info { padding: 0.5em; }
+	.section-info p { font-size: 11pt; }
+	.section-contacto { padding: 1.5em; }
+	.social-icons { font-size: 30px; }
 }
 
 .text-center { text-align:center; }
@@ -678,9 +622,6 @@ p {
   font-weight: 300;
   font-size: 10pt;
   line-height: 17pt;
-}
-a {
-  color: #ffffff;
 }
 .clear {
   clear: both;

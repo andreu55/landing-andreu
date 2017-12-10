@@ -17,7 +17,9 @@
 	  gtag('config', 'UA-107688108-1');
 	</script>
 
-	<link rel="shortcut icon" href="favicon.ico">
+	{{-- <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> --}}
+	{{-- <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> --}}
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -187,42 +189,40 @@
 		//transition speed
 		var gradientSpeed = 0.002;
 
-		function updateGradient()
-		{
+		function updateGradient() {
 
-		if ( $===undefined ) return;
+			if ( $===undefined ) return;
 
-		var c0_0 = colors[colorIndices[0]];
-		var c0_1 = colors[colorIndices[1]];
-		var c1_0 = colors[colorIndices[2]];
-		var c1_1 = colors[colorIndices[3]];
+			var c0_0 = colors[colorIndices[0]];
+			var c0_1 = colors[colorIndices[1]];
+			var c1_0 = colors[colorIndices[2]];
+			var c1_1 = colors[colorIndices[3]];
 
-		var istep = 1 - step;
-		var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
-		var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
-		var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-		var color1 = "rgb("+r1+","+g1+","+b1+")";
+			var istep = 1 - step;
+			var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+			var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+			var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+			var color1 = "rgb("+r1+","+g1+","+b1+")";
 
-		var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
-		var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
-		var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-		var color2 = "rgb("+r2+","+g2+","+b2+")";
+			var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+			var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+			var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+			var color2 = "rgb("+r2+","+g2+","+b2+")";
 
-		$('#gradient').css({ background: "linear-gradient(20deg, "+color1+", "+color2+")" });
+			$('#gradient').css({ background: "linear-gradient(20deg, "+color1+", "+color2+")" });
 
-		step += gradientSpeed;
-		if ( step >= 1 )
-		{
-			step %= 1;
-			colorIndices[0] = colorIndices[1];
-			colorIndices[2] = colorIndices[3];
+			step += gradientSpeed;
+			if ( step >= 1 )
+			{
+				step %= 1;
+				colorIndices[0] = colorIndices[1];
+				colorIndices[2] = colorIndices[3];
 
-			//pick two new target color indices
-			//do not pick the same as the current one
-			colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-			colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-
-		}
+				//pick two new target color indices
+				//do not pick the same as the current one
+				colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+				colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+			}
 		}
 
 		setInterval(updateGradient,10);
@@ -233,13 +233,8 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				// anchors:['portfolio', 'info', 'contacto'],
-				scrollingSpeed: 750,
-				// css3: false,
-				// lockAnchors: false,
-				// keyboardScrolling: true,
-				// animateAnchor: true,
-				// dragAndMove: true,
+				anchors:['portfolio', 'info', 'contacto'],
+				scrollingSpeed: 800,
 			});
 		});
 	</script>

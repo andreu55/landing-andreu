@@ -6,11 +6,11 @@ $data['message'] = (isset($_POST['message']) && $_POST['message']) ? $_POST['mes
 if ($data['email'] && $data['message']) {
 
   $to      = 'anduwet2@gmail.com';
-  $subject = 'the subject';
-  $message = 'hello';
-  $headers = 'From: webmaster@example.com' . "\r\n" .
-  'Reply-To: webmaster@example.com' . "\r\n" .
-  'X-Mailer: PHP/' . phpversion();
+  $subject = 'Contacto desde andreugarcia.com';
+  $message = $data['message'] . " desde " . $data['email'];
+  $headers = 'From: info@andreugarcia.com' . "\r\n" .
+             'Reply-To: info@andreugarcia.com' . "\r\n" .
+             'X-Mailer: PHP/' . phpversion();
 
   mail($to, $subject, $message, $headers);
 

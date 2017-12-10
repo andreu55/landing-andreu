@@ -121,7 +121,7 @@
 	              </div>
 	          </aside>
 
-	          <section class="col s12 m12 l8 section" id="theinfo">
+	          <div class="col s12 m12 l8" id="theinfo">
 	              <div class="cover-latter z-depth-1">
 	                  <div class="cover-title">
 											@php
@@ -154,26 +154,23 @@
 	                  	<img src="{{ asset('img/firma_andreu.png') }}" alt="" height="100" class="img-responsive">
 	                  </div>
 	              </div>
-	          </section>
+	          </div>
 	      </div><!-- end row -->
 	  	</div>
 		</div>
 
-		{{-- data-anchor="contacto" --}}
-		<div class="section" style="background:#FFF">
+		<div class="section section-contacto" data-anchor="contacto" style="background:#FFF">
 
 			{{-- @include('layouts.footer') --}}
 
 			<div class="container">
 				<div class="row">
 			    <form class="col s12">
-						<h1>Contacto</h1>
+						<h2>Contacto</h2>
 			      <div class="row">
-							<div class="input-field col s6">
+							<div class="input-field col m6 s12">
 			          <input id="email" type="email" class="validate">
 			          <label for="email">Email</label>
-			        </div>
-			        <div class="input-field col s6">
 			        </div>
 			      </div>
 			      <div class="row">
@@ -182,17 +179,37 @@
 			          <label for="message">Mensaje</label>
 			        </div>
 			      </div>
+            <div class="row">
+							<div class="col m6 s12 social-icons">
+								<div class="row">
+									<a target="_blank" rel="nofollow" href="https://www.facebook.com/anduwet">
+										<div class="col s3">
+											<i class="fa fa-fw fa-facebook"></i>
+										</div>
+									</a>
+									<a target="_blank" rel="nofollow" href="https://twitter.com/andreu55">
+										<div class="col s3">
+											<i class="fa fa-fw fa-twitter"></i>
+										</div>
+									</a>
+									<a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/andreu-garcia-martinez-69a95061/">
+										<div class="col s3">
+											<i class="fa fa-fw fa-linkedin"></i>
+										</div>
+									</a>
+									<a target="_blank" rel="nofollow" href="https://github.com/andreu55">
+										<div class="col s3">
+											<i class="fa fa-fw fa-github"></i>
+										</div>
+									</a>
+								</div>
+							</div>
+              <div class="col m6 s12">
+              	<p class="right-align"><button id="send_button" class="btn btn-large waves-effect waves-light" type="button" name="action">Enviar mensaje</button></p>
+              </div>
+            </div>
 			    </form>
-					<div class="col s6">
-						<div class="footer-distributed">
-					    <div class="footer-icons">
-					      <a target="_blank" rel="nofollow" href="https://www.facebook.com/anduwet"><i class="fa fa-facebook"></i></a>
-					      <a target="_blank" rel="nofollow" href="https://twitter.com/andreu55"><i class="fa fa-twitter"></i></a>
-					      <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/andreu-garcia-martinez-69a95061/"><i class="fa fa-linkedin"></i></a>
-					      <a target="_blank" rel="nofollow" href="https://github.com/andreu55"><i class="fa fa-github"></i></a>
-					    </div>
-					  </div>
-					</div>
+
 			  </div>
 			</div>
 
@@ -204,7 +221,7 @@
 	{{-- Modal --}}
 	<div class="modal-box">
 		<div class="modal-box-content">
-			<section class="section">
+			<div class="themodal" style="padding:7vmax">
 				<div style="margin-top:150px">
 					<div class="bloque_molon mobile-hide">
 						<div class="pad-22 text-center op">
@@ -233,7 +250,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</div>
 		<button class="modal-close"><i class="fa fa-2x fa-compress" aria-hidden="true"></i></button>
 	</div>
