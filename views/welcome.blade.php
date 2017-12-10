@@ -22,7 +22,7 @@
 	<div class="modal-box">
 		<div class="modal-box-content">
 			<div class="themodal" style="padding:7vmax">
-				<div style="margin-top:150px">
+				<div style="margin-top:50px">
 					<div class="bloque_molon mobile-hide">
 						<div class="pad-22 text-center op">
 							<a target="_blank" class="modal-url" rel="nofollow" href="#">
@@ -34,7 +34,7 @@
 						<div class="pad-22">
 							<div class="bloque_fade">
 								<li class="fade_molon">
-									<h3 id="modal-title">The titulaco</h3>
+									<h2 id="modal-title">The titulaco</h2>
 								</li>
 								<li class="fade_molon">
 									<div id="modal-content">
@@ -45,14 +45,14 @@
 									<hr class="modal-space">
 								</li>
 								<li class="fade_molon"><a class="modal-url" target="_blank" rel="nofollow" href="#">Ver página</a></li>
-								{{-- <li class="fade_molon"><a id="modal-url-face" target="_blank" rel="nofollow" href="#">Facebook</a></li> --}}
+								<li class="fade_molon"><a class="mclose" href="#">Volver</a></li>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<button class="modal-close"><i class="fa fa-2x fa-compress" aria-hidden="true"></i></button>
+		<button class="modal-close mclose"><i class="fa fa-2x fa-compress" aria-hidden="true"></i></button>
 	</div>
 
 @endsection

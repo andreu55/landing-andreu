@@ -2,6 +2,7 @@
 <p class="thefont section__subtitle">
   Si puedes imaginarlo, puedes hacerlo.<br>
   ¿Tienes un proyecto en mente? Hablemos.
+  {{-- <span onclick="$.fn.fullpage.moveTo('contacto');">Hablemos</span> --}}
 </p>
 <div class="isolayer isolayer--deco4">
   <ul class="grid">

@@ -17,8 +17,10 @@
 	  gtag('config', 'UA-107688108-1');
 	</script>
 
-	{{-- <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> --}}
-	{{-- <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> --}}
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon/favicon.ico') }}">
+	<link rel="icon" type="image/x-icon" href="{{ asset('favicon/favicon.ico') }}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-icon-180x180.png') }}">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('favicon/android-icon-192x192.png') }}">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -102,7 +104,7 @@
 	<script>
 
 	var $trigger = $('.modal-open');
-	var $close = $('.modal-close');
+	var $close = $('.mclose');
 	var $modal = $('.modal-box');
 
 	$(window).on('resize', function() {
@@ -240,6 +242,42 @@
 	</script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<script type="text/javascript">
+
+		var _SET_INTERVAL_HANDLE;
+		var _ERROR_IN_PAGE = 1;
+		var _IMAGE_COUNTER = 0;
+		var _ERROR_FAVICON_IMAGES = ['andreu1.png', 'andreu2.png', 'andreu3.png', 'andreu4.png', 'andreu5.png'];
+		var _NORMAL_FAVICON_IMAGE = '{{ asset('favicon/favicon.ico') }}';
+
+		document.addEventListener('visibilitychange', function() {
+			if (_ERROR_IN_PAGE == 1) {
+				if (document.hidden) { ShowErrorFavicon(); }
+				else { ShowNormalFavicon(); }
+			}
+		});
+
+		function ShowErrorFavicon() {
+			_SET_INTERVAL_HANDLE = setInterval(function() {
+			    $("link[rel='icon']").remove();
+			    $("link[rel='shortcut icon']").remove();
+			    $("head").append('<link rel="icon" href="{{ asset('favicon') }}/' + _ERROR_FAVICON_IMAGES[_IMAGE_COUNTER] + '" type="image/x-icon">');
+
+			    if(_IMAGE_COUNTER == _ERROR_FAVICON_IMAGES.length -1)
+			        _IMAGE_COUNTER = 0;
+			    else
+			        _IMAGE_COUNTER++;
+			}, 180);
+		}
+
+		function ShowNormalFavicon() {
+			clearInterval(_SET_INTERVAL_HANDLE);
+			$("head").append('<link rel="shortcut icon" type="image/x-icon" href="' + _NORMAL_FAVICON_IMAGE + '">');
+			$("head").append('<link rel="icon" type="image/x-icon" href="' + _NORMAL_FAVICON_IMAGE + '">');
+		}
+
+	</script>
 
 </body>
 </html>

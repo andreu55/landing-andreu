@@ -41,7 +41,7 @@ $data['portfolio'] = [
     'title' => 'Grupo Solivesa',
     'content' => '<em>Full Stack Developer</em><br>
       <p>Solivesa es una aplicación de gestión de ventas de telecomunicaciones (utilizada principalmente para Vodafone) y de contratos de energéticas (Enérgya VM), pensada para el uso de los comerciales y el equipo de soporte técnico para coordinar y agilizar su trabajo.</p>
-      <p>Trabajé junto con un equipo de 3 personas en la creación y expansión de Solivesa en php a pelo.</p>
+      <p>Trabajé junto con un equipo de 3 personas en la creación y expansión de Solivesa en php puro.</p>
       <p>También hicimos una Applicación nativa para SmartPhones con ionic Framework para el front y con Laravel para el Back</p>',
     'social_url' => 'http://www.gruposolivesa.com/'
   ],[
