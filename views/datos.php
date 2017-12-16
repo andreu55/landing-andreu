@@ -95,31 +95,36 @@ $data['portfolio'] = [
     'img' => 'img/proj/neofit.png',
     'alt' => 'NeoFit',
     'title' => 'NeoFit',
-    'content' => 'En construcción',
+    'content' => '<em>FrontEnd Developer</em><br>
+      <p>En construcción</p>',
     'social_url' => 'http://neofit.info/'
   ],[ // 10
     'img' => 'img/proj/vision10.png',
     'alt' => 'Vision 10',
     'title' => 'Vision 10',
-    'content' => 'En construcción',
+    'content' => '<em>FrontEnd Developer</em><br>
+      <p>En construcción</p>',
     'social_url' => 'http://www.vision10.es/'
   ],[ // 11
     'img' => 'img/proj/ofersalud.png',
     'alt' => 'Ofersalud',
     'title' => 'Ofersalud',
-    'content' => 'En construcción',
+    'content' => '<em>Full Stack Developer</em><br>
+      <p>En construcción</p>',
     'social_url' => 'https://ofersalud.es/'
   ],[ // 12
     'img' => 'img/proj/ecoproject.png',
     'alt' => 'Eco Projectes',
     'title' => 'Eco Projectes',
-    'content' => 'En construcción',
+    'content' => '<em>FrontEnd Developer</em><br>
+      <p>En construcción</p>',
     'social_url' => 'http://eco-project.es/'
   ],[ // 13
     'img' => 'img/proj/best.png',
     'alt' => 'Best Valencia',
     'title' => 'Best Valencia',
-    'content' => 'En construcción',
+    'content' => '<em>Project Manager - IT Responsible</em><br>
+      <p>En construcción</p>',
     'social_url' => 'http://blog.bestvalencia.org/'
   ],[ // 14
     'img' => 'img/proj/pr1.png',
