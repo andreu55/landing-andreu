@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
 <head>
-	<meta charset="UTF-8" />
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>@yield('title', 'Andreu García Martínez')</title>
-	<meta name="description" content="Decorative &amp; interactive isometric &amp; 3D grids." />
-	<meta name="keywords" content="isometric, grid, images, masonry, perspective" />
+	<title>@yield('title', 'Andreu García | Full Stack Developer')</title>
+	<meta name="description" content="Si puedes imaginarlo, puedes hacerlo. ¿Tienes un proyecto en mente? Hablemos." />
+	<meta name="keywords" content="developer, php, laravel, autónomo, freelance" />
 
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107688108-1"></script>
@@ -26,10 +27,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css" integrity="sha256-MWBJX/7o3UIX5sMN/izdthod08WoIcWN0HOP7/X8+48=" crossorigin="anonymous" /> --}}
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/demo.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/component.css') }}" />
-
-	{{-- <script src="{{ asset('js/modernizr.custom.js') }}"></script> --}}
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
 </head>
 <body class="demo-2">

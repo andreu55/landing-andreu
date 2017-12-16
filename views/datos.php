@@ -25,7 +25,7 @@ $data['portfolio'] = [
       <p>Fue una experiencia muy provechosa: ahora siempre programo las aplicaciones para que admitan mucho más de lo que se había pensado en un principio.</p>',
     'social_url' => 'http://www.blackbottom.es/'
   ],[ // 2
-    'img' => 'img/proj/taxovaloracion.jpg',
+    'img' => 'img/proj/taxo.png',
     'alt' => 'Taxo Valoración',
     'title' => 'Taxo Valoración',
     'content' => '<em>Full Stack Developer – Project Manager</em><br>
