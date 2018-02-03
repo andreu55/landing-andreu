@@ -127,11 +127,15 @@ $data['portfolio'] = [
       <p>En construcción</p>',
     'social_url' => 'http://blog.bestvalencia.org/'
   ],[ // 14
-    'img' => 'img/proj/pr1.png',
-    'alt' => 'En construcción',
-    'title' => 'En construcción',
-    'content' => 'En construcción',
-    'social_url' => '#'
+    'img' => 'img/proj/cuentonomo.png',
+    'alt' => 'Cuentónomo',
+    'title' => 'Cuentónomo | Cuentas fáciles para los autónomos',
+    'content' => '<em>Full Stack Developer</em><br>
+      <p>Cuentónomo es un proyecto personal que empezó como una aplicación sin ni siquiera base de datos para contar los ingresos y los gastos que tenía siendo autónomo y
+      calcularme automáticamente los desgraves y lo que tenía que ingresar de IVA en cada trimestre</p>
+      <p>Algunos amigos que vieron me dijeron que estaba muy bien y que porqué no la ofrecía al público, así que la cambié para que utilizara una base de datos e hice los cambios necesarios para adaptarla.</p>
+      <p>Actualmente sigue en proceso de expansión, voy añadiendo nuevas ideas cuando saco un poco de tiempo!</p>',
+    'social_url' => 'https://cuentonomo.com/'
   ]
 ];
 
