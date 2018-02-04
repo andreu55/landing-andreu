@@ -103,14 +103,18 @@ $data['portfolio'] = [
     'alt' => 'Vision 10',
     'title' => 'Vision 10',
     'content' => '<em>FrontEnd Developer</em><br>
-      <p>En construcción</p>',
+      <p>Otro de los lugares donde he aprendido muchísimo, Vision10 es una productora valenciana que nace en la década de los 90, mi estancia allí estuvo llena de pequeños y grandes proyectos, configuraciones de servidores y gestores de correos.</p>
+      <p>Buenos tiempos y muy buena gente.</p>',
     'social_url' => 'http://www.vision10.es/'
   ],[ // 11
     'img' => 'img/proj/ofersalud.png',
     'alt' => 'Ofersalud',
     'title' => 'Ofersalud',
     'content' => '<em>Full Stack Developer</em><br>
-      <p>En construcción</p>',
+      <p>Ofersalud fue un proyecto bonico que empezamos un pequeño grupo de amigos y del que poco queda actualmente, fue de mis primeros proyectos serios y consistió en montar una web donde Los
+      clientes pudieran comprar, navegar e informarse de lo que ofrecíamos.</p>
+      <p>Hablo en pasado porque nos compraron la idea, se perdió la esencia, se hizo mas caro y (en mi opinión) fue todo al traste.</p>
+      <p>Pero, eso sí, aprendí un montón. :)</p>',
     'social_url' => 'https://ofersalud.es/'
   ],[ // 12
     'img' => 'img/proj/ecoproject.png',
@@ -124,7 +128,9 @@ $data['portfolio'] = [
     'alt' => 'Best Valencia',
     'title' => 'Best Valencia',
     'content' => '<em>Project Manager - IT Responsible</em><br>
-      <p>En construcción</p>',
+      <p>BEST es una especie de organización sin fines de lucro de Estudiantes de Tecnología que se organizan a nivel europeo.</p>
+      <p>Ofrece oportunidades de comunicación, cooperación e intercambio a través de cursos y competencias de ingeniería que amplian sus conocimientos en temas que complementan su educación de ingeniería.</p>
+      <p>Esto también crea el contexto en el cual los miembros de la organización pueden compartir conocimiento y ganar experiencia organizando estos eventos.</p>',
     'social_url' => 'http://blog.bestvalencia.org/'
   ],[ // 14
     'img' => 'img/proj/cuentonomo.png',
@@ -132,7 +138,7 @@ $data['portfolio'] = [
     'title' => 'Cuentónomo | Cuentas fáciles para los autónomos',
     'content' => '<em>Full Stack Developer</em><br>
       <p>Cuentónomo es un proyecto personal que empezó como una aplicación sin ni siquiera base de datos para contar los ingresos y los gastos que tenía siendo autónomo y
-      calcularme automáticamente los desgraves y lo que tenía que ingresar de IVA en cada trimestre</p>
+      calcularme automáticamente los desgraves y lo que tenía que ingresar de IVA en cada trimestre.</p>
       <p>Algunos amigos que vieron me dijeron que estaba muy bien y que porqué no la ofrecía al público, así que la cambié para que utilizara una base de datos e hice los cambios necesarios para adaptarla.</p>
       <p>Actualmente sigue en proceso de expansión, voy añadiendo nuevas ideas cuando saco un poco de tiempo!</p>',
     'social_url' => 'https://cuentonomo.com/'
