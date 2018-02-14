@@ -5,9 +5,13 @@
 
     RewriteEngine On
 
-    # Redireccion sin www
-    RewriteCond %{HTTP_HOST} ^www.andreugarcia.com [NC]
-    RewriteRule ^(.*)$ http://andreugarcia.com/$1 [L,R=301]
+    # Redireccion sin www (eliminado)
+    # RewriteCond %{HTTP_HOST} ^www.andreugarcia.com [NC]
+    # RewriteRule ^(.*)$ https://andreugarcia.com/$1 [L,R=301]
+
+    # Redireccion a https
+    RewriteCond %{HTTPS} !=on
+    RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
