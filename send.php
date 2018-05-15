@@ -5,7 +5,7 @@ $data['message'] = (isset($_POST['message']) && $_POST['message']) ? $_POST['mes
 
 if ($data['email'] && $data['message']) {
 
-  $to      = 'anduwet2@gmail.com';
+  $to      = 'info@andreugarcia.com';
   $subject = 'Contacto desde andreugarcia.com';
   $message = $data['message'] . " desde " . $data['email'];
   $headers = 'From: info@andreugarcia.com' . "\r\n" .
