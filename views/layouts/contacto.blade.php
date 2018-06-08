@@ -39,7 +39,7 @@
                 <i class="fa fa-fw fa-twitter"></i>
               </div>
             </a>
-            <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/andreu-garcia-martinez-69a95061/">
+            <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/andreugarcia-com">
               <div class="col s2">
                 <i class="fa fa-fw fa-linkedin"></i>
               </div>
