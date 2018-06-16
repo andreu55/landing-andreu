@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>@yield('title', 'Andreu García | Full Stack Developer')</title>
-	<meta http-equiv="Content-Type" content="text/html">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Si puedes imaginarlo, puedes hacerlo. ¿Tienes un proyecto en mente? Hablemos." />
