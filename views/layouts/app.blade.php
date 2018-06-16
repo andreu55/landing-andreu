@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es" class="no-js">
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8">
+	<title>@yield('title', 'Andreu García | Full Stack Developer')</title>
+	<meta http-equiv="Content-Type" content="text/html">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>@yield('title', 'Andreu García | Full Stack Developer')</title>
 	<meta name="description" content="Si puedes imaginarlo, puedes hacerlo. ¿Tienes un proyecto en mente? Hablemos." />
 	<meta name="keywords" content="developer, php, laravel, autónomo, freelance" />
 
@@ -231,7 +231,7 @@
 	</script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.js" integrity="sha256-SwWHEBZICAfuD82HWp9i1VmxX0dXjllMm6cNKvucHAY=" crossorigin="anonymous"></script>
-	<script type="text/javascript">
+	<script>
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				anchors:['portfolio', 'info', 'contacto'],
@@ -243,7 +243,7 @@
 	{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> --}}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
-	<script type="text/javascript">
+	<script>
 
 		var _SET_INTERVAL_HANDLE;
 		var _ERROR_IN_PAGE = 1;
