@@ -2,6 +2,15 @@
     "name": "andreu55/landing-pure-php",
     "description": "Portfolio de Andreu García Martinez, un programador muy molón!",
     "require": {
+        "php": "^7.0.0",
         "philo/laravel-blade": "3.*"
+    },
+    "config": {
+        "platform": {
+          "php": "7.2.10"
+        },
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
     }
 }
