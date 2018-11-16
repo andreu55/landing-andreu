@@ -1,7 +1,7 @@
 <?php
 
-$cuadrados_totales = 18;
-$cuadrados_repetidos = 3;
+$cuadrados_totales = 21; // Cuantos queremos que hayan (multiplos de 3)
+$cuadrados_repetidos = 3; // Las que se repiten arriba y abajo
 $total = $cuadrados_totales - $cuadrados_repetidos;
 
 $data['portfolio'] = [
@@ -32,8 +32,6 @@ $data['portfolio'] = [
       <p>Taxo es una compañía de tasaciones que me contrató a mí y a otros miembros de mi equipo para empezar su andadura digital.</p>
       <p>Necesitaba renovarse y cambiar las aplicaciones viejas de gestión por unas nuevas y más efectivas, no solo para la empresa sino también para los clientes externos, pero hasta que presentamos las nuevas apps transcurrió un periodo oscuro en que mi trabajo consistió sobre todo en deshacer marañas de código y solucionar líos.</p>
       <p>Taxo es ahora mi principal cliente y actualmente gestiono dos proyectos con ellos:</p>
-      <p><b>delfos.taxo.es</b></p>
-      <p>Delfos es una aplicación web de gestión interna desde la cual los encargados de personal llevan a cabo búsquedas de tasadores y consultas de documentos. Dirigí el desarrollo de la aplicación en Angular e hice la API en Laravel.</p>
       <p><b>valoracion.taxo.es</b></p>
       <p>Aplicación web en php desde donde entran los pedidos de tasaciones, habilitada para realizar pagos mediante transferencia y paypal.</p>',
     'social_url' => 'https://taxo.es/'
@@ -64,16 +62,18 @@ $data['portfolio'] = [
       <p>Desde Golftab surgió una nueva aplicación, FGranks para gestionar partidos de golf, eventos, torneos, calificaciones, etc. a nivel mundial.</p>
       <p>Éramos cuatro personas en el equipo de desarrollo, más los programadores que vinieron antes que nosotros, por lo que Golftab contribuyó bastante a que aprendiera a trabajar en equipos medianos, dividir el trabajo y aunar nuestros esfuerzos de forma efectiva. También aprendí que el golf tiene más miga de lo que parece, la forma de clasificar es diferente en cada país con el dolor de cabeza que suponen las excepciones para un programador.</p>',
     'social_url' => 'http://golf-tab.com/'
-  ],[ // 6
-    'img' => 'img/proj/inspire.png',
-    'alt' => 'Inspire',
-    'title' => 'Inspire, encuentra tu inspiración',
-    'content' => '<em>Full Stack Developer</em><br>
-      <p>Inspire es una aplicación web en desarrollo con Laravel y Vue, Se trata de un proyecto personal que nació de una pregunta: «¿podemos nutrir la creatividad con palabras aleatorias?» Lo aleatorio tiene la virtud de romper los moldes rígidos del cerebro que impiden la entrada de nuevas ideas o la reestructuración de patrones existentes.</p>
-      <p>Ya hay aplicaciones y webs que ofrecen palabras aleatorias, pero ninguna que se adapte a las necesidades concretas de los escritores, ni tampoco que permitan vincular aleatoriamente ideas que el usuario introduce en el sistema.</p>
-      <p>La primera idea la tuvo Marta, mi pareja, pero pronto vimos todo el potencial que podía tener y aún seguimos trabajando en ella; es uno de los peligros de estar demasiado inspirado: no se te acaban las ideas.</p>',
-    'social_url' => 'http://writermuse.es/'
-  ],[ // 7
+  ],
+  // [ // 6
+  //   'img' => 'img/proj/inspire.png',
+  //   'alt' => 'Inspire',
+  //   'title' => 'Inspire, encuentra tu inspiración',
+  //   'content' => '<em>Full Stack Developer</em><br>
+  //     <p>Inspire es una aplicación web en desarrollo con Laravel y Vue, Se trata de un proyecto personal que nació de una pregunta: «¿podemos nutrir la creatividad con palabras aleatorias?» Lo aleatorio tiene la virtud de romper los moldes rígidos del cerebro que impiden la entrada de nuevas ideas o la reestructuración de patrones existentes.</p>
+  //     <p>Ya hay aplicaciones y webs que ofrecen palabras aleatorias, pero ninguna que se adapte a las necesidades concretas de los escritores, ni tampoco que permitan vincular aleatoriamente ideas que el usuario introduce en el sistema.</p>
+  //     <p>La primera idea la tuvo Marta, mi pareja, pero pronto vimos todo el potencial que podía tener y aún seguimos trabajando en ella; es uno de los peligros de estar demasiado inspirado: no se te acaban las ideas.</p>',
+  //   'social_url' => 'http://writermuse.es/'
+  // ],
+  [ // 7
     'img' => 'img/proj/writermuse.png',
     'alt' => 'Writermuse',
     'title' => 'Writermuse, Escribe. Inspira',
@@ -142,6 +142,20 @@ $data['portfolio'] = [
       <p>Algunos amigos que vieron me dijeron que estaba muy bien y que porqué no la ofrecía al público, así que la cambié para que utilizara una base de datos e hice los cambios necesarios para adaptarla.</p>
       <p>Actualmente sigue en proceso de expansión, voy añadiendo nuevas ideas cuando saco un poco de tiempo!</p>',
     'social_url' => 'https://cuentonomo.com/'
+  ],[ // 15
+    'img' => 'img/proj/ulises.png',
+    'alt' => 'Ulises Taxo',
+    'title' => 'Ulises | Gestión integral de trabajos y facturación',
+    'content' => '<em>Back End Developer</em><br>
+      <p></p>',
+    'social_url' => 'https://ulises.taxo.es/'
+  ],[ // 16
+    'img' => 'img/proj/delfos.png',
+    'alt' => 'Delfos Taxo',
+    'title' => 'Delfos | Gestión de empleados',
+    'content' => '<em>Back End Developer</em><br>
+      <p>Delfos es una aplicación web de gestión interna desde la cual los encargados de personal llevan a cabo búsquedas de tasadores y consultas de documentos. Dirigí el desarrollo de la aplicación en Angular e hice la API en Laravel.</p>',
+    'social_url' => 'https://delfos.taxo.es/'
   ]
 ];
 

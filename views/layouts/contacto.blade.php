@@ -2,7 +2,6 @@
   <div class="row">
     <form class="col s12">
       <h2>
-        <i class="fa fa-fw fa-paper-plane"></i>
         Contacto
         <small class="pull-right" style="color:#777">
           <em>
@@ -53,7 +52,9 @@
         </div>
         <div class="col m6 s12">
           <p class="right-align">
-            <button id="send_button" class="btn btn-large waves-effect waves-light" type="button" name="action">Enviar mensaje</button>
+            <button id="send_button" class="btn btn-large waves-effect waves-light" type="button" name="action">
+              Enviar mensaje <i class="fa fa-fw fa-paper-plane"></i>
+            </button>
           </p>
         </div>
       </div>

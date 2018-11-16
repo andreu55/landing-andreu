@@ -603,13 +603,17 @@ p {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 12.5pt;
-  line-height: 17pt;
+  line-height: 16pt;
 }
 
 #modal-content {
 	color: #000;
 	text-align: justify;
-	text-shadow: 0 0 1px #AAA;
+	text-shadow: 0.5px 0.5px 1px #aaa;
+}
+
+#modal-title {
+	text-shadow: 0.5px 0.5px 1px #aaa;
 }
 
 @media (max-width: 800px) {
@@ -1011,7 +1015,7 @@ h5 {
   font-weight: 400;
 }
 .cover-latter p:last-child {
-  margin: 30px 0px;
+  margin: 30px 0px 15px;
 }
 .cover-latter p h2 {
   margin-bottom: 0px;
@@ -1024,9 +1028,14 @@ h5 {
   font-weight: 500;
 }
 .cover-latter .cover-title h2 {
-  font-size: 12pt;
-  line-height: 20pt;
-  margin-top: 20px;
+  /* font-size: 12pt; */
+	line-height: 27pt;
+  margin: 20px 0 7px;
+}
+.text-muted {
+	margin-top: 8px;
+	color: #bbb;
+	font-style: italic;
 }
 .cover-latter .cover-title h4 {
   font-weight: 500;

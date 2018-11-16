@@ -8,7 +8,7 @@
 	<meta name="description" content="Si puedes imaginarlo, puedes hacerlo. ¿Tienes un proyecto en mente? Hablemos." />
 	<meta name="keywords" content="developer, php, laravel, autónomo, freelance" />
 
-	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107688108-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -24,8 +24,9 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> --}}
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> --}}
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css" integrity="sha256-MWBJX/7o3UIX5sMN/izdthod08WoIcWN0HOP7/X8+48=" crossorigin="anonymous" /> --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
@@ -171,11 +172,12 @@
 	});
 
 	var colors = new Array(
-		[67, 123, 154],
-		[205, 226, 237],
-		[203, 229, 236],
-		[209, 215, 239]
-		// [255, 244, 219],
+		[67, 123, 154], // Azul molon
+		[205, 226, 237], // Azul claro
+		[203, 229, 236], // Azul verdoso clarito
+		// [53, 190, 159], // Azul verdoso molon
+		// [209, 215, 239], // Morado claro
+		[117, 217, 165], // Amarillito
 		);
 
 		var step = 0;
@@ -240,7 +242,8 @@
 	</script>
 
 	{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> --}}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> --}}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 	<script>
 
