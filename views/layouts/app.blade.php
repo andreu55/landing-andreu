@@ -173,9 +173,9 @@
 
 	var colors = new Array(
 		[67, 123, 154], // Azul molon
+		[53, 190, 159], // Azul verdoso molon
 		[205, 226, 237], // Azul claro
-		[203, 229, 236], // Azul verdoso clarito
-		// [53, 190, 159], // Azul verdoso molon
+		// [203, 229, 236], // Azul verdoso clarito
 		// [209, 215, 239], // Morado claro
 		[117, 217, 165], // Amarillito
 		);
