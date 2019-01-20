@@ -2,16 +2,15 @@
   <header>
     <?php
     $hora = date('G');
-    if ($hora >= 0 && $hora <= 6) { $texto = "¡¿Que haces a estas horas despierto?!"; }
+    if ($hora >= 0 && $hora <= 6) { $texto = "¿Trasnochando?"; }
     elseif ($hora > 6 && $hora <= 14) { $texto = "¡Buenos días!"; }
     elseif ($hora > 14 && $hora <= 20) { $texto = "¡Buenas tardes!"; }
     elseif ($hora > 20 && $hora <= 24) { $texto = "¡Buenas noches!"; }
     ?>
+
+    <div class="moment_hora">Son las <span id="moment_hora"><?= date('H:i') ?></span></div>
     <h2>
-      <?= $texto ?><br>
-      <small>
-        Son las <span id="moment"><?= date('H:i') ?></span>
-      </small>
+      <span id="moment_frase"><?= $texto ?></span>
     </h2>
     <p>
       Full Stack Developer<br>

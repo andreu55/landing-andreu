@@ -45,6 +45,11 @@ small {
 	font-size: 80%;
 }
 
+.moment_hora {
+	font-size: 1.15rem;
+	font-weight: 800;
+}
+
 blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;

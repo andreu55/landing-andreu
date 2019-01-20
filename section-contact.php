@@ -7,13 +7,13 @@
     <form>
       <div class="fields">
         <div class="field half">
-          <input type="text" name="name" id="name" placeholder="Name" />
+          <input type="text" name="name" id="name" placeholder="Nombre" />
         </div>
         <div class="field half">
           <input type="email" name="email" id="email" placeholder="Email" />
         </div>
         <div class="field">
-          <textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+          <textarea name="message" id="message" placeholder="Mensaje" rows="7"></textarea>
         </div>
       </div>
       <ul class="actions">
@@ -29,7 +29,7 @@
       </li>
       <li>
         <h3>Teléfono</h3>
-        <a href="#">Cómo si los de Vodafone no <br>dieran suficiente la lata...</a>
+        <span>Cómo si los de Vodafone no <br>dieran suficiente la lata...</span>
       </li>
       <li>
         <h3>Ubicación</h3>

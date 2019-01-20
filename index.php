@@ -48,26 +48,59 @@
 			// Refresca cada 5 segundos la hora
 			setInterval(
 				function() {
-					$("#moment").html(moment().format('H:mm'))
+					$("#moment_hora").html(moment().format('H:mm'));
+
+					var hora = moment().format('HH');
+					var texto = '';
+
+					if (hora >= 0 && hora <= 6) { texto = "¿Trasnochando?"; }
+					else if (hora > 6 && hora <= 14) { texto = "¡Buenos días!"; }
+					else if (hora > 14 && hora <= 20) { texto = "¡Buenas tardes!"; }
+					else if (hora > 20 && hora <= 24) { texto = "¡Buenas noches!"; }
+
+					$("#moment_frase").html(texto);
+
 				}, 5000
 			);
+
 
 			// Enviador de correo
 			$("#send_button").click(function() {
 
-				$("#send_button").html('<i class="fa fa-refresh fa-spin fa-fw"></i>');
+				var name = $('#name').val();
+				var email = $('#email').val();
+				var message = $('#message').val();
 
-				$.post("send.php", {
-					name: $('#name').val(),
-					email: $('#email').val(),
-					message: $('#message').val()
-				},
-				function(data, status){
-					if(status == 'success') {
-						console.log(data);
-						$("#send_button").html('Enviado!');
-					}
-				});
+				if (email && message) {
+
+					$("#send_button").html('<i class="fa fa-refresh fa-spin fa-fw"></i>');
+
+					$.post("send.php", {
+						name: name,
+						email: email,
+						message: message
+					},
+					function(data, status) {
+						if(status == 'success') {
+							console.log(data);
+							$("#send_button").html('Enviado!');
+						}
+					});
+
+				} else {
+
+					$("#send_button").html('¡Faltan datos!');
+
+					setTimeout(
+						function() {
+							$("#send_button").hide();
+							$("#send_button").html('Enviar');
+							$("#send_button").fadeIn();
+						}, 3000
+					);
+
+				}
+
 			});
 
 		</script>
