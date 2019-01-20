@@ -14,7 +14,7 @@
       ]
     ],[
       'titulo' => 'Taxo',
-      'texto' => 'Taxo es una compañía de tasaciones que necesitaba renovarse y cambiar las aplicaciones viejas de gestión por unas nuevas y más efectivas, no solo para la empresa sino también para los clientes externos. Taxo es ahora mi principal cliente y actualmente gestiono dos proyectos con ellos',
+      'texto' => 'Taxo es una compañía de tasaciones que necesitaba renovarse y cambiar las aplicaciones viejas de gestión por unas nuevas y más efectivas, no solo para la empresa sino también para los clientes externos. Taxo es ahora mi principal cliente y actualmente gestiono dos proyectos con ellos.',
       'imgs' => [
         [
           'href' => 'taxo.png',
@@ -37,7 +37,7 @@
       ]
     ],[
       'titulo' => 'Marta Tornero',
-      'texto' => 'Mtornero es la página de porfolio de Marta Tornero, construida principalmente en Bootstrap. A primera vista es un proyecto sencillo, una página estática que podría haberse hecho sin programación, pero mi mayor aprendizaje fue convertirme en profesor. WriterMuse era una página de asesoría literaria y corrección desarrollada en Wordpress.',
+      'texto' => 'He ayudado a Marta a construir dos páginas, Mtornero y Writermuse, una en Bootstrap y la otra en Wordpress. Mi mayor reto no fue hacerlas sino mi labor como profesor. Fue una mezcla de ideas de Marta y mías, pero los gifs animados de gatos no fueron cosa mía, por desgracia.',
       'imgs' => [
         [
           'href' => 'writermuse.png',
@@ -58,8 +58,8 @@
         // ]
       ]
     ],[
-      'titulo' => 'Black Bottom',
-      'texto' => 'Black Bottom es una escuela de lindy hop que necesitaba gestionar los pagos de más de un millar de alumnos. Decidieron dejar de lado su anticuado sistema en papel y que les desarrollara una aplicación php sencilla en Laravel.',
+      'titulo' => 'Black Bottom: Lindy Hop',
+      'texto' => 'Black Bottom necesitaba una aplicación "sencilla" para gestionar los pagos de más de un millar de alumnos. Debí sospechar, lo que alguien llama "sencillo" rara vez lo es: la app de Black Bottom se expandió hasta abarcar asistencias, hojas de contabilidad, login de alumnos, subir vídeos para repasar en casa… Me enseñó flexibilidad y a ir un paso por delante.',
       'imgs' => [
         [
           'href' => 'blackbottom.jpg',
@@ -70,7 +70,7 @@
       ]
     ],[
       'titulo' => 'Oclock',
-      'texto' => 'Oclock era un equipo de trabajo donde dabamos vida a los deseos digitales de los clientes, trabajamos con Solivesa con una aplicación de gestión de ventas de telecomunicaciones, con Golftab con una aplicación web y móvil para la gestión de escuelas de golf. Wopap es una aplicación de gestión de documentos e inventariado que permite almacenar toda tu información en la nube y Neofit una aplicación para los gimnasios.',
+      'texto' => 'Oclock era un equipo de trabajo donde dábamos vida a los deseos digitales de los clientes. Trabajamos con <b>Solivesa</b> con una aplicación de gestión de ventas de telecomunicaciones; con <b>Golftab</b> con una aplicación web y móvil para la gestión de escuelas de golf; creamos <b>Wopap</b> para gestionar e inventariar documentos y permitía almacenar toda tu información en la nube y <b>Neofit</b> es una aplicación para crear tus propias tablas de entrenamiento para el gimnasio.',
       'imgs' => [
         [
           'href' => 'solivesa.jpg',
@@ -96,7 +96,7 @@
       ]
     ],[
       'titulo' => 'Misc',
-      'texto' => 'La vida del informático no para, cuando tengo ratos libres me dedico a crear, ayudar o investigar en nuevos proyectos, BEST es una especie de organización sin fines de lucro de Estudiantes de Tecnología que se organizan a nivel europeo. Cuentónomo es un proyecto personal que empezó como una aplicación para contar los ingresos y los gastos que tenía siendo autónomo. Vision10 es una productora valenciana que nace en la década de los 90. Ofersalud fue un proyecto consistió en montar mi primera web',
+      'texto' => 'La vida del informático no para. Cuando tengo ratos libres me dedico a crear, ayudar o investigar en nuevos proyectos. <b>BEST</b> es una organización de Estudiantes de Tecnología a nivel europeo, donde fui responsable de IT. <b>Cuentónomo</b> es un proyecto personal que empezó como una aplicación para contar los ingresos y gastos que tenía siendo autónomo y acabó haciendo muchas cosas más.  <b>Ofersalud</b> fue un proyecto que empezamos unos amigos con una idea innovadora en el sector de la salud, pero nos compraron la idea y ahora no tiene nada que ver con sus inicios. <b>Vision10</b> es una productora valenciana a la que ayudé configurando servidores y gestionando correos y donde aprendí muchísimo.',
       'imgs' => [
         [
           'href' => 'cuentonomo.png',
@@ -136,7 +136,7 @@
     <h2>Portfolio</h2>
   </header>
   <div class="content">
-    <p><strong>Integer mollis egestas</strong> nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+    <p>Un breve repaso de las <b>empresas</b> por las que he pasado y los <b>programas</b> que he hecho:</p>
 
     <?php foreach ($portfolio as $p): ?>
 

@@ -39,11 +39,9 @@
 		<script src="assets/js/moment.min.js"></script>
 
 		<!-- El fondo que cambia de color -->
-		<!-- <script src="assets/js/background.js"></script> -->
-
+		<script src="assets/js/background.js"></script>
 
 		<script type="text/javascript">
-
 
 			// Refresca cada 5 segundos la hora
 			setInterval(

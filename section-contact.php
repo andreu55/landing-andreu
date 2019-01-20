@@ -3,7 +3,7 @@
     <h2>Contacta</h2>
   </header>
   <div class="content">
-    <p><strong>Auctor commodo</strong> interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis.</p>
+    <p>Si tienes algún proyecto o <b>idea</b> en la que crees que te pueda ayudar, contacta conmigo.</p>
     <form>
       <div class="fields">
         <div class="field half">

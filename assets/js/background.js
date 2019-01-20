@@ -2,8 +2,8 @@ var colors = new Array(
   [67, 123, 154], // Azul molon
   // [53, 190, 159], // Azul verdoso molon
   [205, 226, 237], // Azul claro
-  [203, 229, 236], // Azul verdoso clarito
-  // [209, 215, 239], // Morado claro
+  // [203, 229, 236], // Azul verdoso clarito
+  [209, 215, 239], // Morado claro
   [117, 217, 165], // Amarillito
 );
 
@@ -16,7 +16,7 @@ var step = 0;
 var colorIndices = [0,1,2,3];
 
 //transition speed
-var gradientSpeed = 0.002;
+var gradientSpeed = 0.003;
 
 function updateGradient() {
 
@@ -31,12 +31,12 @@ function updateGradient() {
   var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
   var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
   var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-  var color1 = "rgba("+r1+","+g1+","+b1+", .7)";
+  var color1 = "rgba("+r1+","+g1+","+b1+", .8)";
 
   var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
   var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
   var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-  var color2 = "rgba("+r2+","+g2+","+b2+", .7)";
+  var color2 = "rgba("+r2+","+g2+","+b2+", .8)";
 
   $('#realback').css({ background: "linear-gradient(20deg, "+color1+", "+color2+")" });
 
