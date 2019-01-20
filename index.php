@@ -1,12 +1,28 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="es">
 	<head>
-		<title>Paradigm Shift by HTML5 UP</title>
+		<title>Andreu García | Full Stack Developer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Si puedes imaginarlo, puedes hacerlo. ¿Tienes un proyecto en mente? Hablemos." />
+		<meta name="keywords" content="developer, php, laravel, autónomo, freelance" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107688108-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-107688108-1');
+		</script>
+
 	</head>
 
 	<body class="is-preload">
