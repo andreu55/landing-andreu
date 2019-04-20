@@ -17,7 +17,7 @@
         </div>
       </div>
       <ul class="actions">
-        <li><a type="submit" id="send_button" class="button primary">Enviar</a></li>
+        <li><button type="submit" id="send_button" class="button primary">Enviar</button></li>
       </ul>
     </form>
   </div>

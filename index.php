@@ -3,7 +3,7 @@
 	<head>
 		<title>Andreu García | Full Stack Developer</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Si puedes imaginarlo, puedes hacerlo. ¿Tienes un proyecto en mente? Hablemos." />
 		<meta name="keywords" content="developer, php, laravel, autónomo, freelance" />
 
@@ -57,7 +57,7 @@
 		<!-- El fondo que cambia de color -->
 		<script src="assets/js/background.js"></script>
 
-		<script type="text/javascript">
+		<script>
 
 			// Refresca cada 5 segundos la hora
 			setInterval(
