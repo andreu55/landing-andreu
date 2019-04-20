@@ -8,6 +8,6 @@
     </ul>
   </header>
   <div class="content">
-    <span class="image fill" data-position="center"><img src="images/andreu.jpg" alt="Andreu garcia" /></span>
+    <span class="image fill" data-position="center"><img src="images/andreu.png" alt="Andreu garcia" /></span>
   </div>
 </section>
