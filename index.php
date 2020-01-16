@@ -57,6 +57,55 @@
 		<!-- El fondo que cambia de color -->
 		<script src="assets/js/background.js"></script>
 
+		<script src="https://www.google.com/recaptcha/api.js?render=6Ld-EdAUAAAAAEY9z85dnx7Vcj3MYaX7L_tNhUJ1"></script>
+		<script>
+		grecaptcha.ready(function() {
+			grecaptcha.execute('6Ld-EdAUAAAAAEY9z85dnx7Vcj3MYaX7L_tNhUJ1', {action: 'homepage'}).then(function(token) {
+
+				// Enviador de correo
+				$("#send_button").click(function() {
+
+					var name = $('#name').val();
+					var email = $('#email').val();
+					var message = $('#message').val();
+
+					if (email && message) {
+
+						$("#send_button").html('<i class="fa fa-refresh fa-spin fa-fw"></i>');
+
+						$.post("send.php", {
+							name: name,
+							email: email,
+							message: message
+						},
+						function(data, status) {
+							if(status == 'success') {
+								console.log(data);
+								$("#send_button").html('Enviado!');
+							}
+						});
+
+					} else {
+
+						$("#send_button").html('¡Faltan datos!');
+
+						setTimeout(
+							function() {
+								$("#send_button").hide();
+								$("#send_button").html('Enviar');
+								$("#send_button").fadeIn();
+							}, 3000
+						);
+
+					}
+
+				});
+
+			});
+		});
+		</script>
+
+
 		<script>
 
 			// Refresca cada 5 segundos la hora
@@ -78,44 +127,7 @@
 			);
 
 
-			// Enviador de correo
-			$("#send_button").click(function() {
 
-				var name = $('#name').val();
-				var email = $('#email').val();
-				var message = $('#message').val();
-
-				if (email && message) {
-
-					$("#send_button").html('<i class="fa fa-refresh fa-spin fa-fw"></i>');
-
-					$.post("send.php", {
-						name: name,
-						email: email,
-						message: message
-					},
-					function(data, status) {
-						if(status == 'success') {
-							console.log(data);
-							$("#send_button").html('Enviado!');
-						}
-					});
-
-				} else {
-
-					$("#send_button").html('¡Faltan datos!');
-
-					setTimeout(
-						function() {
-							$("#send_button").hide();
-							$("#send_button").html('Enviar');
-							$("#send_button").fadeIn();
-						}, 3000
-					);
-
-				}
-
-			});
 
 		</script>
 
