@@ -57,6 +57,7 @@
 		<!-- El fondo que cambia de color -->
 		<script src="assets/js/background.js"></script>
 
+		<?php /*
 		<script src="https://www.google.com/recaptcha/api.js?render=6Ld-EdAUAAAAAEY9z85dnx7Vcj3MYaX7L_tNhUJ1"></script>
 		<script>
 		grecaptcha.ready(function() {
@@ -104,7 +105,7 @@
 			});
 		});
 		</script>
-
+		*/ ?>
 
 		<script>
 

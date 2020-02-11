@@ -4,6 +4,12 @@
   </header>
   <div class="content">
     <p>Si tienes algún proyecto o <b>idea</b> en la que crees que te pueda ayudar, contacta conmigo.</p>
+    <p style="color:#83adb5; text-align: center;">
+      <em>
+        info@andreugarcia.com
+      </em>
+    </p>
+    <?php /*
     <form>
       <div class="fields">
         <div class="field half">
@@ -20,6 +26,7 @@
         <li><button type="submit" id="send_button" class="button primary">Enviar</button></li>
       </ul>
     </form>
+    */ ?>
   </div>
   <footer>
     <ul class="items">
