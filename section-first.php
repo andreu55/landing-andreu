@@ -14,7 +14,7 @@
     </h2>
     <p>
       Full Stack Developer<br>
-      Proyect manager<br>
+      Project manager<br>
       Computer engineer<br>
       Lindy hop dancer
     </p>
